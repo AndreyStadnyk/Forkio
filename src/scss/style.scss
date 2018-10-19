@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700i');
+
+$color-purple:#8e82ad;
+$color-white: #fff;
+$color-lightblue: #848e97;
+
+a,li{
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+.container{
+    margin: 0 auto;
+}
+@mixin style-button {
+    border: none;
+    background-color: $color-purple;
+    padding: 12px 25px;
+    border-radius: 25px;
+    &-link{
+        color: $color-white;
+        font-weight: 700;
+    }
+}
+
+@import "_header";
+@import "_introRevEdit";
+@import "_sectionAbout";
+
+@media (min-width: 320px) and (max-width: 400px) {
+    body{
+        min-width: 320px;
+    }
+}
