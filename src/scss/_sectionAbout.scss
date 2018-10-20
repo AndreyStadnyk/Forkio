@@ -3,14 +3,12 @@ $color-white: #fff;
 $color-lightblue: #848e97;
 
 .about{
-    padding: 60px 10px 90px 10px;
+    padding: 60px 16px 90px 16px;
     height: auto;
     background-image: url(../img/img_320/bg-about__320.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     &__wrap{
-        padding-right: 20px;
-        padding-left: 20px;
         text-align: center;
         display: flex;
         flex-wrap: wrap;
@@ -26,9 +24,9 @@ $color-lightblue: #848e97;
 }
 
 .information{
-    margin: 40px 0 40px 0;
+    padding: 40px 0 40px 0;
     &__img{
-        margin-bottom: 35px;
+        padding-bottom: 35px;
     }
     &__text{
         font-family: 'Lato', sans-serif;
@@ -43,15 +41,13 @@ $color-lightblue: #848e97;
 .price__wrap{
     margin-top: 70px;
     text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
 } 
 .price__title{
     color:  $color-white;
     font-size: 28px;
     font-weight: 700;
     line-height: 40px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     text-transform: uppercase;
 }
 .benefits{

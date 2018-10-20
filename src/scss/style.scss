@@ -34,4 +34,58 @@ body{
     body{
         min-width: 320px;
     }
+    .header__logo-text{
+        display: none;
+    }
+}
+@media (min-width: 401px) and (max-width: 480px) {
+    .header{
+        background-image: url(../img/img_480/header-banner_480.jpg);
+        &__button {
+        font-size: 17px;
+            &__logo-text{
+                display: block;
+            }
+        }
+        &__content{
+            padding: 0 31px;
+        }
+    }
+    .navbar__item-link{
+        font-size: 24px;
+        padding: 25px 0;
+        &:before{
+            height: 53px;
+        }
+    }
+    .headline {
+        padding: 101px 31px 0 31px;
+        &__title {
+            font-size: 54px;
+            padding-bottom: 35px;
+        }
+        &__sub {
+            font-size: 20px;
+            padding: 0 0 23px 0;
+        }
+        &__version {
+            font-size: 16px;
+        }
+    }
+    .bottom__button{
+        font-size: 21px;
+        width: 390px;
+    }
+    .intro{
+        padding: 50px 31px 78px 31px;
+        &__title{
+            font-size: 42px; 
+            padding: 72px 0 36px 0;
+            line-height: 45px;
+        }
+        &__sub {
+            font-size: 16px;
+            padding: 0 0 44px 0;
+        }
+    }
 }

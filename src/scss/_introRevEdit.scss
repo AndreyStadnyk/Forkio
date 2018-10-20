@@ -12,7 +12,7 @@ $color-lightblue: #848e97;
 }
 
 .intro{
-    padding: 35px 25px 88px 25px;
+    padding: 35px 16px 88px 16px;
     &__wrap{
         text-align: center;
     }
@@ -24,14 +24,14 @@ $color-lightblue: #848e97;
         font-weight: 700;
         text-transform: uppercase;
         color: $color-purple;
-        padding: 72px 40px 15px 40px;
+        padding-top: 72px;
         line-height: 40px;
     }
     &__sub{
         font-family: 'lato', sans-serif;
         color:  #323232;
         line-height: 20px;
-        padding: 0 25px 25px 25px;
+        padding: 25px 0 25px 0;
     }
 }
 
