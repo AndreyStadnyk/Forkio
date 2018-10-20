@@ -1,38 +1,36 @@
+$color-purple:#8e82ad;
+$color-white: #fff;
+$color-lightblue: #848e97;
+
 .about{
     padding: 60px 10px 90px 10px;
     height: auto;
     background-image: url(../img/img_320/bg-about__320.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    &__content{
+    &__wrap{
         padding-right: 20px;
         padding-left: 20px;
         text-align: center;
         display: flex;
         flex-wrap: wrap;
-        &-title{
-            color: $color-white;
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 50px;
-            margin: 0 auto;
-        }
+        border-bottom: 2px solid rgba(255, 255, 255, 0.15)
     }
-    &__bottom-line{
-        height: 2px;
-        background-color: rgba(255, 255, 255, 0.15);
-        border: none;
-        margin: 0;
+    &__title{
+        color: $color-white;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 50px;
+        margin: 0 auto;
     }
-    
 }
 
-.content__box{
+.information{
     margin: 40px 0 40px 0;
-    &-img{
+    &__img{
         margin-bottom: 35px;
     }
-    &-text{
+    &__text{
         font-family: 'Lato', sans-serif;
         color:  $color-white;
         font-size: 16px;
@@ -42,21 +40,21 @@
     }
 }
 
-.about__price{
+.price__wrap{
     margin-top: 70px;
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
-    &-title{
-        color:  $color-white;
-        font-size: 28px;
-        font-weight: 700;
-        line-height: 40px;
-        margin-bottom: 50px;
-        text-transform: uppercase;
-    }
 } 
-.price__box{
+.price__title{
+    color:  $color-white;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.benefits{
     width: 260px;
     display: flex;
     flex-direction: column;
@@ -66,7 +64,7 @@
     margin-bottom: 15px;
     background-color:  rgba(255, 255, 255, 0.11);
     transition: all 0.4s;
-    &-title{
+    &__title{
         padding: 46px 0;
         width: 100%;
         color:  $color-white;
@@ -78,20 +76,19 @@
             background-color: rgba(57, 42, 58, 0.6);
         }
     }
-    &-price{
+    &__price{
         color:  $color-white;
         font-size: 60px;
         padding: 30px 0;
+        &-bold{
+            font-weight: 700;
+        }
     }
-    &-priceBold{
-        font-weight: 700;
-    }
-    &-time{
+    &__time{
         text-transform: uppercase;
         color: $color-white;
-        
     }
-    &-time:after{
+    &__time:after{
         content: "";
         display: block;
         background-color:  $color-purple;
@@ -100,24 +97,24 @@
         margin: 0 auto;
         margin-top: 40px;
     }
-    &-license{
+    &__license{
         color:  $color-white;
         font-size: 16px;
         padding: 30px 20px 70px 20px;
         line-height: 26px;
     }
-    &-active {
+    &__active {
         transform: scale(1.05);
         transition: all 0.4s;
         background-color: rgba(57, 42, 58, 0.5);
     }
 
 }
-.price__box:hover .price__box-title{
+.benefits:hover .benefits__title{
     background-color: rgba(57, 42, 58, 0.6);
     transition: all 0.4s;
 }
-.price__box:hover{
+.benefits:hover{
     transform: scale(1.05);
     transition: all 0.4s;
     background-color: rgba(57, 42, 58, 0.5);
@@ -128,11 +125,6 @@
     padding: 16px 37px;
     border-radius: 25px;
     margin-bottom: 40px;
-    &-link{
-        color:  $color-white;
-        text-transform: uppercase;
-    }
-
+    color:  $color-white;
+    text-transform: uppercase;
 }
-
-

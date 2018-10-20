@@ -1,1 +1,1 @@
-document.addEventListener("click",function(e){e.target.closest(".toggle__menu")&&document.getElementsByClassName("header__toggle")[0].classList.toggle("header__navbar-active")});
+document.addEventListener("click",function(e){e.target.closest(".toggle__menu")&&document.getElementsByClassName("toggle")[0].classList.toggle("navbar__active")});
