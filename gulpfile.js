@@ -14,7 +14,7 @@ var autoprefixer = require('gulp-autoprefixer'); //
 var runSequence = require('run-sequence'); //таски исполняются последовательно и [параллельно, параллельно]
 //var lastRun = require('last-run'); //возвращает дату последнего запуска этой задачи
 var browserSync = require('browser-sync').create();
-
+var sassGlob = require('gulp-sass-glob');
 
 
 
@@ -24,6 +24,7 @@ gulp.task('hello', function(){
 
 gulp.task('styles', function(){
     return gulp.src('src/scss/**/*.scss') //находим файлы в папке src по шаблону /**/*.scss
+      .pipe(sassGlob())
       .pipe(sourcemaps.init())   //плагин gulp когда в него поступает новый файл-создает спец.свойство file.sourceMap, в которое записывает, что пока что с файлом ничего не делали. 
       .pipe(sass())              //преобразуем в css
 //      .pipe(debug({title: 'sass'})) //выводим в командную строку что происходит с пометкой 'sass'

@@ -1,11 +1,24 @@
-//////////////////////////////////////////
+$color-purple:#8e82ad;
+$color-white: #fff;
+$color-lightblue: #848e97;
+
+@mixin style-button {
+    border: none;
+    background-color: $color-purple;
+    padding: 12px 25px;
+    border-radius: 25px;
+    color: $color-white;
+    font-weight: 700;
+}
+
 .header{
+    position: relative;
     height: 718px;
     background-image: url(../img/img_320/header-banner__320.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    &__top{
+    &__bg{
         height: 103px;
         background-color: #262626;
     }
@@ -20,7 +33,7 @@
     &__button{
         @include style-button;
     }
-    &__button-link{
+    &__button{
         font-size: 15px;
     }
 }
@@ -45,82 +58,94 @@
         }
 }
 
-.header__navbar{
+.navbar{
     position: absolute;
     width: 100%;
     top: -500px;
     right: 0;
     opacity: 0;
     transition: all 0.4s linear;
-    &-item{
+    &__item{
         background-color: #303030;
         border-bottom: 1px solid #383838;
+        &-link{
+            color:  $color-white;
+            font-size: 15px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            padding: 15px 0px;
+            transition: all 0.4s;
+        }
+        &-link:hover{
+            color: $color-purple;
+            transition: all 0.4s;
+        }
+        &-link:before{
+            content: "";
+            width: 4px;
+            display: inline-block;
+            border-left: 4px solid transparent;
+            padding-left: 33px;
+            height:35px;
+            transition: 0.4s border-left;
+        }
+        &-link:hover:before{
+            border-left: 4px solid $color-purple;
+            transition: 0.4s border-left;
+        }
     }
-    &-link{
-        color:  $color-white;
-        font-size: 15px;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        padding: 15px 0px;
-        transition: all 0.4s;
-    }
-    &-link:hover{
-        color: $color-purple;
-        transition: all 0.4s;
-    }
-    &-link:before{
-        content: "";
-        width: 4px;
-        display: inline-block;
-        border-left: 4px solid transparent;
-        padding-left: 33px;
-        height:35px;
-        transition: 0.4s border-left;
-    }
-    &-link:hover:before{
-        border-left: 4px solid $color-purple;
-        transition: 0.4s border-left;
-    }
+    
 }
 
-.header__navbar-active .header__toggle {
+.navbar__active .toggle {
     position: relative;
 }
-.header__navbar-active .toggle__menu-firstline{
+.navbar__active .toggle__menu-firstline{
     transform: rotate(45deg);
     width: 35px;
     margin-left: 0;
 }
-.header__navbar-active .toggle__menu-secondline{
+.navbar__active .toggle__menu-secondline{
     opacity: 0;
 }
-.header__navbar-active .toggle__menu-thirdline{
+.navbar__active .toggle__menu-thirdline{
     transform: rotate(-45deg);
 }
-.header__navbar-active .header__navbar{
+.navbar__active .navbar{
     top: 103px;
     opacity: 1;
 }
-///////////////////////////////////////////
-.header__title{
+
+.headline{
     text-align: center;
     padding-top: 43px;
-    &-title{
+    &__title{
         color:  $color-white;
         font-size: 47px;
         font-weight: 700;
         padding-bottom: 20px;
     }
-    &-sub{
+    &__sub{
         font-size: 17px;
         color: $color-purple;
         line-height: 36px;
         padding: 0px 32px 10px 32px;
     }
-    &-text{
+    &__version{
         color:  $color-lightblue;
         text-transform: uppercase;
     }
 }
-////////////////////////////////////////////
+
+.bottom__button{
+    position: absolute;
+    width: 260px;
+    overflow: auto;
+    margin: auto;
+    bottom: -22px;
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    @include style-button;
+}

@@ -1,52 +1,49 @@
-//////////////////////////////
+$color-purple:#8e82ad;
+$color-white: #fff;
+$color-lightblue: #848e97;
+
+@mixin style-button {
+    border: none;
+    background-color: $color-purple;
+    padding: 12px 25px;
+    border-radius: 25px;
+    color: $color-white;
+    font-weight: 700;
+}
+
 .intro{
-    position: relative;
     padding: 35px 25px 88px 25px;
-    &__content{
+    &__wrap{
         text-align: center;
-        &-text{
-            color: $color-lightblue;
-        }
-        &-title{
-            font-size: 25px;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: $color-purple;
-            padding: 72px 40px 15px 40px;
-            line-height: 40px;
-        }
-        &-subTitle{
-            font-family: 'lato', sans-serif;
-            color:  #323232;
-            line-height: 20px;
-            padding: 0 25px 25px 25px;
-        }
+    }
+    &__text{
+        color: $color-lightblue;
+    }
+    &__title{
+        font-size: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-purple;
+        padding: 72px 40px 15px 40px;
+        line-height: 40px;
+    }
+    &__sub{
+        font-family: 'lato', sans-serif;
+        color:  #323232;
+        line-height: 20px;
+        padding: 0 25px 25px 25px;
     }
 }
 
-.intro__button{
-    position: absolute;
-    width: 260px;
-    overflow: auto;
-    margin: auto;
-    top: -25px;
-    left: 0;
-    right: 0;
-    @include style-button;
-    &-link{
-        font-size: 18px;
-    }
-}
-
-.intro__actions{
+.actions{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    &-item{
+    &__item{
         margin: 15px 7px;
         }
-    &-link{
+    &__link{
         color: #323232;
         font-weight: 700;
         padding: 3px 10px;
@@ -55,18 +52,19 @@
         border-radius: 0.25em;
         background-color: #eff3f6;
         background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+        &-icon{
+            padding-right: 5px;
+        }
+        &-count{
+            color: #323232;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 3px 10px;
+            background-color: $color-white;
+            border: 1px solid rgba(27,31,35,0.2);
+            margin: -7px;
+            border-radius: 0.25em;
+        }
     }
-    &-icon{
-        padding-right: 5px;
-    }
-    &-count{
-        color: #323232;
-        font-size: 12px;
-        font-weight: 700;
-        padding: 3px 10px;
-        background-color: $color-white;
-        border: 1px solid rgba(27,31,35,0.2);
-        margin: -7px;
-        border-radius: 0.25em;
-    }
+    
 }
