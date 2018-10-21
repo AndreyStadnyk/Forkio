@@ -23,6 +23,9 @@ $color-lightblue: #848e97;
         margin: 0 auto;
         padding-bottom: 100px;
     }
+    &__bottomText{
+        display: none;
+    }
 }
 
 .information{
@@ -112,11 +115,11 @@ $color-lightblue: #848e97;
         padding: 30px 20px 70px 20px;
         line-height: 26px;
     }
-    &__active {
+    /* &__active {
         transform: scale(1.05);
         transition: all 0.4s;
         background-color: rgba(57, 42, 58, 0.5);
-    }
+    } */
 
 }
 .benefits:hover .benefits__title{
