@@ -1,0 +1,97 @@
+.social{
+    padding: 65px 65px 6px;
+    text-align: center;
+    font-weight: 400;
+    
+    .social-carousel{
+        
+        &__userName{
+            color:  #474747;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+        }
+        
+        &__userLog{
+            color:  $color-purple;
+            font-size: 16px;
+            line-height: 32px;
+            margin: 0 auto 25px;
+            
+        }
+        
+        &__slide{
+            
+            display: flex;
+            flex-direction: column;
+            
+            img{
+                margin: 0 auto 25px;
+            }
+            
+            p{
+              font-family: Lato;
+              font-size: 17px;
+              line-height: 24px;
+            } 
+            
+            span{
+                color:  #848e97;
+                font-size: 16px;
+                line-height: 32px;
+                
+                }
+        }
+    }
+    
+    .social-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        button{
+            margin-top: 30px;
+            padding: 0;
+            width: 280px;
+            height: 50px;
+            border-radius: 4px;
+            font-size: 21px;
+    
+            i{
+
+            }
+            
+            span{
+                
+                margin: 0 0 0 ;
+                font-size: 21px;
+                display: inline-block;
+                width: 210px;
+                
+//                text-align: center;
+                
+            }
+        }
+        
+        &__git{
+            color:  #000000;
+            background-color:  #f3f3f3; 
+        }
+        
+        &__twit{
+            color: $color-white;
+            background-color:  #26a6d1;
+        }
+        
+        &__fb{
+            color: $color-white;
+            background-color:  #3b5998;
+        }
+        
+        >span{
+            margin-top: 18px;
+            color: $color-lightblue;
+            font-size: 14px;
+        }
+    }
+}
