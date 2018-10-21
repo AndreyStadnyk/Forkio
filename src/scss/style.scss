@@ -13,9 +13,11 @@ a,li{
 body{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    min-width: 320px;
 }
 .container{
     margin: 0 auto;
+    padding: 0 10px;
 }
 @mixin style-button {
     border: none;
@@ -30,10 +32,12 @@ body{
 @import "_introRevEdit";
 @import "_sectionAbout";
 
-@media (min-width: 320px) and (max-width: 400px) {
-    body{
-        min-width: 320px;
+@media (max-width: 320px) {
+    .header__logo-text{
+        display: none;
     }
+}
+@media (min-width: 320px) and (max-width: 400px) {
     .header__logo-text{
         display: none;
     }
@@ -48,7 +52,7 @@ body{
             }
         }
         &__content{
-            padding: 0 31px;
+            padding: 0 20px;
         }
     }
     .navbar__item-link{
@@ -59,7 +63,7 @@ body{
         }
     }
     .headline {
-        padding: 101px 31px 0 31px;
+        padding: 101px 20px 0 20px;
         &__title {
             font-size: 54px;
             padding-bottom: 35px;
@@ -74,12 +78,15 @@ body{
     }
     .bottom__button{
         font-size: 21px;
-        width: 390px;
+        width: 380px;
     }
     .intro{
-        padding: 50px 31px 78px 31px;
+        padding: 50px 0 78px 0;
+        &__wrap{
+            padding: 0 20px;
+        }
         &__title{
-            font-size: 42px; 
+            font-size: 35px; 
             padding: 72px 0 36px 0;
             line-height: 45px;
         }
@@ -88,4 +95,28 @@ body{
             padding: 0 0 44px 0;
         }
     }
+    .information__text {
+        padding: 0 47px 0 47px;
+    }
+    .about {
+        padding: 77px 0 96px 0;
+        &__wrap{
+            padding: 0 20px;
+        }
+        &__title{
+            font-size: 42px;
+        }
+    }
+    .price{
+        &__wrap{
+            padding: 0 20px;
+        }
+        &__title{
+            font-size: 42px;
+            padding-bottom: 57px;
+        }
+    }
+}
+@media (min-width: 481px) and (max-width: 992px) {
+
 }

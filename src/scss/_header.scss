@@ -27,8 +27,7 @@ $color-lightblue: #848e97;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
-        padding: 0px 16px;
+        padding: 0px 6px;
     }
     &__logo{
         display: flex;
@@ -133,7 +132,7 @@ $color-lightblue: #848e97;
 
 .headline{
     text-align: center;
-    padding: 43px 16px 0 16px;
+    padding: 43px 6px 0 6px;
     &__title{
         color:  $color-white;
         font-size: 47px;
