@@ -23,6 +23,7 @@ gulp.task('hello', function(){
 });
 
 gulp.task('styles', function(){
+    console.log('styles work')
     return gulp.src('src/scss/**/*.scss') //находим файлы в папке src по шаблону /**/*.scss
       .pipe(sassGlob())
       .pipe(sourcemaps.init())   //плагин gulp когда в него поступает новый файл-создает спец.свойство file.sourceMap, в которое записывает, что пока что с файлом ничего не делали. 

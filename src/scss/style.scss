@@ -13,17 +13,33 @@ a,li{
 body{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    min-width: 320px;
 }
 .container{
     margin: 0 auto;
+    padding: 0 10px;
 }
-@mixin style-button{
-    border: none;
+
+@mixin style-button {
     background-color: $color-purple;
     padding: 12px 25px;
     border-radius: 25px;
     color: $color-white;
     font-weight: 700;
+    border: 1px solid $color-purple;
+    transition: all 0.4s;
+}
+@mixin style-button-hover{
+        color: $color-purple;
+        background-color: $color-white;
+        border: 1px solid $color-purple;
+        transition: all 0.4s;
+        cursor: pointer;
+}
+@mixin item-link-hover{
+    padding: 12px 35px;
+    border-radius: 25px;
+    transition: all 0.4s;
 }
 
 @mixin footer-title{
@@ -46,8 +62,233 @@ body{
 @import "_sectionAbout";
 @import "_footer";
 
-@media (min-width: 320px) and (max-width: 400px) {
-    body{
-        min-width: 320px;
+@media (max-width: 320px) {
+    .header__logo-text{
+        display: none;
     }
+}
+//======================320======================//
+@media (min-width: 320px) and (max-width: 400px) {
+    .header__logo-text{
+        display: none;
+    }
+}
+//======================480======================//
+@media (min-width: 401px) and (max-width: 480px) {
+    .header{
+        background-image: url(../img/img_480/header-banner_480.jpg);
+        &__button {
+        font-size: 17px;
+            &__logo-text{
+                display: block;
+            }
+        }
+        &__content{
+            padding: 0 15px;
+        }
+    }
+    .navbar__item-link{
+        font-size: 24px;
+        padding: 25px 0;
+        &:before{
+            height: 53px;
+        }
+    }
+    .headline {
+        padding: 101px 15px 0 15px;
+        &__title {
+            font-size: 54px;
+            padding-bottom: 35px;
+        }
+        &__sub {
+            font-size: 20px;
+            padding: 0 0 23px 0;
+        }
+        &__version {
+            font-size: 16px;
+        }
+    }
+    .bottom__button{
+        font-size: 21px;
+        width: 380px;
+    }
+    .intro{
+        padding: 50px 0 78px 0;
+        &__wrap{
+            padding: 0 15px;
+        }
+        &__title{
+            font-size: 35px; 
+            padding: 72px 0 36px 0;
+            line-height: 45px;
+        }
+        &__sub {
+            font-size: 16px;
+            padding: 0 0 44px 0;
+        }
+    }
+    .information{
+        width: 100%;
+    }
+    .information__text {
+        padding: 0 47px 0 47px;
+    }
+    .about {
+        padding: 77px 0 96px 0;
+        background-image: url(../img/img_480/bg-about__480.jpg);
+        &__wrap{
+            padding: 0 15px;
+        }
+        &__title{
+            font-size: 42px;
+        }
+    }
+    .price{
+        &__wrap{
+            padding: 77px 15px 0 15px; 
+        }
+        &__title{
+            font-size: 42px;
+            padding-bottom: 57px;
+            line-height: 45px;
+        }
+    }
+}
+//======================768======================//
+@media (min-width: 481px) and (max-width: 992px) {
+    .header{
+        background-image: url(../img/img_768/header-banner_768.jpg);
+        &__bg{
+            height: 118px;
+        }
+        &__content{
+            flex-wrap: wrap;
+            height: 118px;
+            padding: 0 10px;
+        }
+        /* &__logo{
+            width: 60%;
+        } */
+    }
+    .header__button{
+        font-size: 16px;
+        padding: 12px 35px;
+    }
+    .toggle{
+        width: 100%;
+        &__menu{
+            display: none;
+        }
+    }
+    .navbar{
+        position: relative;
+        opacity: 1;
+        top: 0;
+        display: flex;
+        justify-content: space-around;
+        &__item{
+            background-color: transparent;
+            border-bottom: none;
+            &-link{
+                padding-bottom: 0;
+                padding-top: 0;
+                font-size: 16px;
+                font-weight: 700;
+                color: $color-purple;
+                transition: all 0.4s;
+                &:hover{
+                    transition: all 0.4s;
+                    color: $color-white;
+                }
+            }
+            &-link:before{
+                display: none;
+            }
+            &-first{
+                display: none;
+            }
+        }
+    }
+    .headline{
+        padding: 50px 10px 0 10px;
+        &__title{
+            font-size: 72px;
+            padding-bottom: 26px;
+        }
+        &__sub{
+            font-size: 24px;
+            padding-bottom: 20px;
+        }
+    }
+    
+    
+    .bottom__button{
+        font-size: 21px;
+        width: 390px;
+    }
+    .intro {
+        padding: 48px 0 98px 0;
+        &__wrap {
+            padding: 0 10px;
+        }
+        &__title{
+            font-size: 42px;
+            padding-top: 94px;
+        }
+        &__sub{
+            font-size: 21px;
+            line-height: 30px;
+            padding: 38px 0;
+        }
+    }
+    .about {
+        padding: 80px 0 90px 0;
+        background-image: url(../img/img_768/bg-about__768.jpg);
+        &__wrap{
+            padding: 0 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__title{
+            font-size: 42px;
+        }
+        &__bottomText{
+            display: block;
+            color: rgba(162, 145, 165, 0.6);
+            padding-bottom: 17px;
+            line-height: 21px;
+        }
+    }
+    .information{
+        width: 45%;
+    }
+    .price__wrap {
+        padding: 80px 10px 0 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .price__title{
+        font-size: 42px;
+        width: 100%;
+    }
+    .benefits{
+        margin-bottom: 92px;
+        margin-left: 20px;
+        margin-right: 20px;
+        min-width: 30%;
+        
+        /* &:hover{
+            transform: scale(1.15);
+        }
+        &__active{
+            transform: scale(1.15);
+        } */
+        &__license{
+
+        }
+    }
+    
 }
