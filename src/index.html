@@ -6,42 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href=".img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
 <body>
 
     <header class="header">
-        <div class="header__top">
+        <div class="header__bg">
             <div class="container">
                 <div class="header__content">
                     <div class="header__logo">
                         <img class="header__logo-img" src="./img/img_320/header-logo__320.png" alt="img">
                     </div>
-                    <button class="header__button">
-                        <a class="header__button-link" href="#">Buy Now</a>
-                    </button>
-                    <div class="header__toggle">
+                    <button class="header__button">Buy Now</button>
+                    <div class="toggle">
                         <div class="toggle__menu">
                             <div class="toggle__menu-line toggle__menu-firstline"></div>
                             <div class="toggle__menu-line toggle__menu-secondline"></div>
                             <div class="toggle__menu-line toggle__menu-thirdline"></div>
                         </div> 
-                        <ul class="header__navbar header__navbar-active">
-                            <li class="header__navbar-item">
-                                <a class="header__navbar-link" href="">Home</a>
+                        <ul class="navbar navbar__active">
+                            <li class="navbar__item">
+                                <a class="navbar__item-link" href="">Home</a>
                             </li>
-                            <li class="header__navbar-item">
-                                <a class="header__navbar-link" href="">Overview</a>
+                            <li class="navbar__item">
+                                <a class="navbar__item-link" href="">Overview</a>
                             </li>
-                            <li class="header__navbar-item">
-                                <a class="header__navbar-link" href="">About Fork</a>
+                            <li class="navbar__item">
+                                <a class="navbar__item-link" href="">About Fork</a>
                             </li>
-                            <li class="header__navbar-item">
-                                <a class="header__navbar-link" href="">Buying Options</a>
+                            <li class="navbar__item">
+                                <a class="navbar__item-link" href="">Buying Options</a>
                             </li>
-                            <li class="header__navbar-item">
-                                <a class="header__navbar-link" href="">Support</a>
+                            <li class="navbar__item">
+                                <a class="navbar__item-link" href="">Support</a>
                             </li>
                         </ul>
                     </div>
@@ -49,112 +47,100 @@
             </div>
         </div>
         <div class="container">
-            <div class="header__title">
-                <h1 class="header__title-title">Fork App</h1>
-                <p class="header__title-sub">A Real Gamechanger In The World Of Web-Development</p>
-                <p class="header__title-text">v.2.8 for mac and windows</p>
+            <div class="headline">
+                <h1 class="headline__title">Fork App</h1>
+                <p class="headline__sub">A Real Gamechanger In The World Of Web-Development</p>
+                <p class="headline__version">v.2.8 for mac and windows</p>
             </div>
         </div>
+        <button class="bottom__button">Download For Free Now</button>
     </header>
 
-    <div class="intro">
+    <section class="intro">
         <div class="container">
-            <div class="intro__content">
-                <button class="intro__button">
-                    <a class="intro__button-link" href="#">Download For Free Now</a>
-                </button>
-                <p class="intro__content-text">Unlimited 30-Days Trial Period</p>
-                <h2 class="intro__content-title">Revolutionary editor</h2>
-                <p class="intro__content-subTitle">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor ,olestie eget ut augue.</p>
-                <ul class="intro__actions">
-                    <li class="intro__actions-item">
-                        <a class="intro__actions-link" href="#">
-                                <i class="intro__actions-icon far fa-eye"></i>Watch</a>
-                        <a class="intro__actions-count" href="#">1,397</a>
+            <div class="intro__wrap">
+                <p class="intro__text">Unlimited 30-Days Trial Period</p>
+                <h2 class="intro__title">Revolutionary editor</h2>
+                <p class="intro__sub">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor ,olestie eget ut augue.</p>
+                <ul class="actions">
+                    <li class="actions__item">
+                        <a class="actions__link" href="#">
+                                <i class="actions__link-icon far fa-eye"></i>Watch</a>
+                        <a class="actions__link-count" href="#">1,397</a>
                     </li>
-                    <li class="intro__actions-item">
-                        <a class="intro__actions-link" href="#">
-                                <i class="intro__actions-icon fas fa-star"></i>Star</a>
-                        <a class="intro__actions-count" href="#">21,038</a>
+                    <li class="actions__item">
+                        <a class="actions__link" href="#">
+                                <i class="actions__link-icon fas fa-star"></i>Star</a>
+                        <a class="actions__link-count" href="#">21,038</a>
                     </li>
-                    <li class="intro__actions-item">
-                        <a class="intro__actions-link" href="#">
-                                <i class="intro__actions-icon fas fa-code-branch"></i>Fork</a>
-                        <a class="intro__actions-count" href="#">4,391</a>
+                    <li class="actions__item">
+                        <a class="actions__link" href="#">
+                                <i class="actions__link-icon fas fa-code-branch"></i>Fork</a>
+                        <a class="actions__link-count" href="#">4,391</a>
                     </li>
                 </ul>
-                </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <section class="about">
         <div class="container">
-            <div class="about__content">
-                <h2 class="about__content-title">People Are Talking About Fork</h2>
-                <div class="content__box">
-                    <img class="content__box-img" src="./img/img_320/smashing-logo__320.png" alt="">
-                    <p class="content__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus, error asperiores quasi aliquid cupiditate ut dolore amet nesciunt cumque perspiciatis libero. Id, possimus. Pariatur quae odit facilis possimus asperiores!</p>
+            <div class="about__wrap">
+                <h2 class="about__title">People Are Talking About Fork</h2>
+                <div class="information">
+                    <img class="information__img" src="./img/img_320/smashing-logo__320.png" alt="">
+                    <p class="information__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus, error asperiores quasi aliquid cupiditate ut dolore amet nesciunt cumque perspiciatis libero. Id, possimus. Pariatur quae odit facilis possimus asperiores!</p>
                 </div>
-                <div class="content__box">
-                    <img class="content__box-img"src="./img/img_320/codrops-logo__320.png" alt="">
-                    <p class="content__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus, error asperiores quasi aliquid cupiditate ut dolore amet nesciunt cumque perspiciatis libero. Id, possimus. Pariatur quae odit facilis possimus asperiores!</p>
+                <div class="information">
+                    <img class="information__img"src="./img/img_320/codrops-logo__320.png" alt="">
+                    <p class="information__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus, error asperiores quasi aliquid cupiditate ut dolore amet nesciunt cumque perspiciatis libero. Id, possimus. Pariatur quae odit facilis possimus asperiores!</p>
                 </div>
-                <div class="content__box">
-                    <img class="content__box-img"src="./img/img_320/w-logo__320.png" alt="">
-                    <p class="content__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus, error asperiores quasi aliquid cupiditate ut dolore amet nesciunt cumque perspiciatis libero. Id, possimus. Pariatur quae odit facilis possimus asperiores!</p>
+                <div class="information">
+                    <img class="information__img"src="./img/img_320/w-logo__320.png" alt="">
+                    <p class="information__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus, error asperiores quasi aliquid cupiditate ut dolore amet nesciunt cumque perspiciatis libero. Id, possimus. Pariatur quae odit facilis possimus asperiores!</p>
                 </div>
-                <div class="content__box">
-                    <img class="content__box-img"src="./img/img_320/pb-logo__320.png" alt="">
-                    <p class="content__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus, error asperiores quasi aliquid cupiditate ut dolore amet nesciunt cumque perspiciatis libero. Id, possimus. Pariatur quae odit facilis possimus asperiores!</p>
+                <div class="information">
+                    <img class="information__img"src="./img/img_320/pb-logo__320.png" alt="">
+                    <p class="information__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus, error asperiores quasi aliquid cupiditate ut dolore amet nesciunt cumque perspiciatis libero. Id, possimus. Pariatur quae odit facilis possimus asperiores!</p>
                 </div>
-                <div class="content__box">
-                    <img class="content__box-img"src="./img/img_320/cb-logo__320.png" alt="">
-                    <p class="content__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus, error asperiores quasi aliquid cupiditate ut dolore amet nesciunt cumque perspiciatis libero. Id, possimus. Pariatur quae odit facilis possimus asperiores!</p>
+                <div class="information">
+                    <img class="information__img"src="./img/img_320/cb-logo__320.png" alt="">
+                    <p class="information__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus, error asperiores quasi aliquid cupiditate ut dolore amet nesciunt cumque perspiciatis libero. Id, possimus. Pariatur quae odit facilis possimus asperiores!</p>
                 </div>
-                <div class="content__box">
-                    <img class="content__box-img"src="./img/img_320/tnw-logo__320.png" alt="">
-                    <p class="content__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus, error asperiores quasi aliquid cupiditate ut dolore amet nesciunt cumque perspiciatis libero. Id, possimus. Pariatur quae odit facilis possimus asperiores!</p>
+                <div class="information">
+                    <img class="information__img"src="./img/img_320/tnw-logo__320.png" alt="">
+                    <p class="information__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus, error asperiores quasi aliquid cupiditate ut dolore amet nesciunt cumque perspiciatis libero. Id, possimus. Pariatur quae odit facilis possimus asperiores!</p>
                 </div>
             </div>
-            <hr class="about__bottom-line">
-            <div class="about__price">
-                <h2 class="about__price-title">Fork Subscription  Pricing</h2>
-                <div class="price__box">
-                    <h3 class="price__box-title">Students</h3>
-                    <span class="price__box-price">$<span class="price__box-priceBold">29</span></span>
-                    <span class="price__box-time">Per month</span>
-                    <span class="price__box-license">Personal License</span>
-                    <button class="price__button">
-                        <a class="price__button-link" href="">Purchase</a>
-                    </button>
+            <div class="price__wrap">
+                <h2 class="price__title">Fork Subscription  Pricing</h2>
+                <div class="benefits">
+                    <h3 class="benefits__title">Students</h3>
+                    <span class="benefits__price">$<span class="benefits__price-bold">29</span></span>
+                    <span class="benefits__time">Per month</span>
+                    <span class="benefits__license">Personal License</span>
+                    <button class="price__button">Purchase</button>
                 </div>
-                <div class="price__box">
-                    <h3 class="price__box-title">Professional</h3>
-                    <span class="price__box-price">$<span class="price__box-priceBold">59</span></span>
-                    <span class="price__box-time">Per month</span>
-                    <span class="price__box-license">Professional License Email Support</span>
-                    <button class="price__button">
-                        <a class="price__button-link" href="">Purchase</a>
-                    </button>
+                <div class="benefits">
+                    <h3 class="benefits__title">Professional</h3>
+                    <span class="benefits__price">$<span class="benefits__price-bold">59</span></span>
+                    <span class="benefits__time">Per month</span>
+                    <span class="benefits__license">Professional License Email Support</span>
+                    <button class="price__button">Purchase</button>
                 </div>
-                <div class="price__box price__box-active">
-                    <h3 class="price__box-title price__box-title-active">Agency</h3>
-                    <span class="price__box-price">$<span class="price__box-priceBold">99</span></span>
-                    <span class="price__box-time">Per month</span>
-                    <span class="price__box-license">1-12 Team Members Phone Support</span>
-                    <button class="price__button">
-                        <a class="price__button-link" href="">Purchase</a>
-                    </button>
+                <div class="benefits benefits__active">
+                    <h3 class="benefits__title benefits__title-active">Agency</h3>
+                    <span class="benefits__price">$<span class="benefits__price-bold">99</span></span>
+                    <span class="benefits__time">Per month</span>
+                    <span class="benefits__license">1-12 Team Members Phone Support</span>
+                    <button class="price__button">Purchase</button>
                 </div>
-                <div class="price__box">
-                    <h3 class="price__box-title">Enterprise</h3>
-                    <span class="price__box-price">$<span class="price__box-priceBold">159</span></span>
-                    <span class="price__box-time">Per month</span>
-                    <span class="price__box-license">Unlimited Team Members 24_ 7 Phone Support</span>
-                    <button class="price__button">
-                        <a class="price__button-link" href="">Purchase</a>
-                    </button>
+                <div class="benefits">
+                    <h3 class="benefits__title">Enterprise</h3>
+                    <span class="benefits__price">$<span class="benefits__price-bold">159</span></span>
+                    <span class="benefits__time">Per month</span>
+                    <span class="benefits__license">Unlimited Team Members 24_ 7 Phone Support</span>
+                    <button class="price__button">Purchase</button>
                 </div>
             </div>
         </div>

@@ -22,10 +22,8 @@ body{
     background-color: $color-purple;
     padding: 12px 25px;
     border-radius: 25px;
-    &-link{
-        color: $color-white;
-        font-weight: 700;
-    }
+    color: $color-white;
+    font-weight: 700;
 }
 
 @import "_header";
