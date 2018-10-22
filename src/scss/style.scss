@@ -20,12 +20,20 @@ body{
     padding: 0 10px;
 }
 @mixin style-button {
-    border: none;
     background-color: $color-purple;
     padding: 12px 25px;
     border-radius: 25px;
     color: $color-white;
     font-weight: 700;
+    border: 1px solid $color-purple;
+    transition: all 0.4s;
+}
+@mixin style-button-hover{
+        color: $color-purple;
+        background-color: $color-white;
+        border: 1px solid $color-purple;
+        transition: all 0.4s;
+        cursor: pointer;
 }
 @mixin item-link-hover{
     padding: 12px 35px;
@@ -141,9 +149,9 @@ body{
             height: 118px;
             padding: 0 10px;
         }
-        &__logo{
+        /* &__logo{
             width: 60%;
-        }
+        } */
     }
     .header__button{
         font-size: 16px;
@@ -170,7 +178,11 @@ body{
                 font-size: 16px;
                 font-weight: 700;
                 color: $color-purple;
-                
+                transition: all 0.4s;
+                &:hover{
+                    transition: all 0.4s;
+                    color: $color-white;
+                }
             }
             &-link:before{
                 display: none;
@@ -249,13 +261,17 @@ body{
         margin-bottom: 92px;
         margin-left: 20px;
         margin-right: 20px;
-        width: 30%;
+        min-width: 30%;
+        
         /* &:hover{
             transform: scale(1.15);
         }
         &__active{
             transform: scale(1.15);
         } */
+        &__license{
+
+        }
     }
     
 }

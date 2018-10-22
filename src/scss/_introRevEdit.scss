@@ -1,16 +1,3 @@
-$color-purple:#8e82ad;
-$color-white: #fff;
-$color-lightblue: #848e97;
-
-@mixin style-button {
-    border: none;
-    background-color: $color-purple;
-    padding: 12px 25px;
-    border-radius: 25px;
-    color: $color-white;
-    font-weight: 700;
-}
-
 .intro{
     padding: 35px 0 88px 0;
     &__wrap{
