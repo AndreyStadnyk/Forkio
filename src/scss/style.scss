@@ -270,6 +270,7 @@ body{
         max-width: 1200px;
     }
     .header{
+        background-image: url(../img/img_1200/header-banner__1200.jpg);
         &__content{
             justify-content: flex-end;
             height: 100px;
@@ -296,6 +297,7 @@ body{
         top: 0;
         display: flex;
         justify-content: space-around;
+        
         &__item{
             background-color: transparent;
             border-bottom: none;
@@ -350,6 +352,7 @@ body{
         }
     }
     .about{
+        background-image: url(../img/img_1200/bg-about__1200.jpg);
         &__title{
             font-size: 48px;
             width: 100%;
@@ -375,6 +378,7 @@ body{
         text-align: center;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .price__title{
         font-size: 48px;
@@ -383,5 +387,6 @@ body{
     }
     .benefits{
         margin: 0 7px 0 7px;
+        max-width: 250px;
     }
 }
