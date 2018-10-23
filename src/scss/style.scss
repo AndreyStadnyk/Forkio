@@ -93,12 +93,11 @@ body{
     }
     .bottom__button{
         font-size: 21px;
-        width: 380px;
+        width: 330px;
     }
     .intro{
-        padding: 50px 0 78px 0;
         &__wrap{
-            padding: 0 15px;
+            padding: 50px 15px 78px 15px;
         }
         &__title{
             font-size: 35px; 
@@ -149,9 +148,6 @@ body{
             height: 118px;
             padding: 0 10px;
         }
-        /* &__logo{
-            width: 60%;
-        } */
     }
     .header__button{
         font-size: 16px;
@@ -210,9 +206,8 @@ body{
         width: 390px;
     }
     .intro {
-        padding: 48px 0 98px 0;
         &__wrap {
-            padding: 0 10px;
+            padding: 48px 10px 98px 10px;
         }
         &__title{
             font-size: 42px;
@@ -225,18 +220,19 @@ body{
         }
     }
     .about {
-        padding: 80px 0 90px 0;
+        padding: 80px 0 17px 0;
         background-image: url(../img/img_768/bg-about__768.jpg);
         &__wrap{
             padding: 0 10px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: baseline;
         }
         &__title{
             font-size: 42px;
         }
         &__bottomText{
+            font-family: 'Lato', sans-serif;
             display: block;
             color: rgba(162, 145, 165, 0.6);
             padding-bottom: 17px;
@@ -258,20 +254,134 @@ body{
         width: 100%;
     }
     .benefits{
-        margin-bottom: 92px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin: 0 20px 92px 20px;
         min-width: 30%;
-        
-        /* &:hover{
+        &:hover{
             transform: scale(1.15);
         }
         &__active{
             transform: scale(1.15);
-        } */
-        &__license{
-
         }
     }
-    
+}
+//======================768======================//
+@media (min-width: 993px) {
+    .container{
+        max-width: 1200px;
+    }
+    .header{
+        &__content{
+            justify-content: flex-end;
+            height: 100px;
+            padding: 0;
+        }
+        &__logo{
+            width: 38%;
+        }
+        &__button{
+            order: 1;
+            width: 75px;
+            margin-left: 20px;
+        }
+    }
+    .toggle{
+        width: 50%;
+        &__menu{
+            display: none;
+        }
+    }
+    .navbar{
+        position: relative;
+        opacity: 1;
+        top: 0;
+        display: flex;
+        justify-content: space-around;
+        &__item{
+            background-color: transparent;
+            border-bottom: none;
+            &-link{
+                padding-bottom: 0;
+                padding-top: 0;
+                font-size: 16px;
+                font-weight: 700;
+                color: $color-purple;
+                transition: all 0.4s;
+                &:hover{
+                    transition: all 0.4s;
+                    color: $color-white;
+                }
+            }
+            &-link:before{
+                display: none;
+            }
+            &-first{
+                display: none;
+            }
+        }
+    }
+    .headline{
+        padding: 60px 0 0 0;
+        &__title{
+            font-size: 82px;
+        }
+        &__sub{
+            font-size: 30px;
+        }
+        &__version{
+            font-size: 16px;
+        }
+    }
+    .bottom__button{
+        font-size: 21px;
+        width: 390px;
+    }
+    .intro{
+        &__wrap{
+            padding: 48px 0 70px 0;
+        }
+        &__title{
+            padding-top:67px;
+            font-size: 54px;
+        }
+        &__sub{
+            font-size: 21px;
+            line-height: 30px;
+            padding: 40px 0 40px 0;
+        }
+    }
+    .about{
+        &__title{
+            font-size: 48px;
+            width: 100%;
+        }
+        &__wrap{
+            padding: 98px 0 0 0;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        &__bottomText {
+            font-family: 'Lato', sans-serif;
+            display: block;
+            color: rgba(162, 145, 165, 0.6);
+            padding: 133px 0 77px 0;
+            line-height: 21px;
+        }
+    }
+    .information {
+        width: 30%;
+    }
+    .price__wrap {
+        padding: 89px 0 0 0;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .price__title{
+        font-size: 48px;
+        padding-bottom: 122px;
+        width: 100%;
+    }
+    .benefits{
+        margin: 0 7px 0 7px;
+    }
 }

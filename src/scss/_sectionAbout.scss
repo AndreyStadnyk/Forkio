@@ -1,11 +1,9 @@
 .about{
-    padding: 60px 0 90px 0;
-    height: auto;
     background-image: url(../img/img_320/bg-about__320.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     &__wrap{
-        padding: 0 6px;
+        padding: 60px 6px 90px 6px;
         text-align: center;
         display: flex;
         flex-wrap: wrap;
@@ -121,7 +119,6 @@
         transition: all 0.4s;
         background-color: rgba(57, 42, 58, 0.5);
     }
-
 }
 .benefits:hover .benefits__title{
     background-color: rgba(57, 42, 58, 0.6);

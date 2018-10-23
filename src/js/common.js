@@ -9,3 +9,9 @@ document.addEventListener('click', function(e){
         console.log(e.target.closest('.toggle__menu'));
     }
 })
+
+function replaceElem(){
+    var remText = document.getElementById('removeText');
+    document.getElementById('pastText').appendChild(remText);
+};
+replaceElem();
