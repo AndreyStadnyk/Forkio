@@ -19,8 +19,23 @@
     &__logo{
         display: flex;
         align-items: center;
-        &-tetx{
-            padding-left: 11px;
+        &-link{
+            background-image: url(../img/img_320/header-logo__320.png);
+            background-repeat: no-repeat;
+            transition: all 0.4s;
+            height: 41px;
+            display: flex;
+            align-items: center;
+        }
+        &-text{
+            font-family: 'Lato', sans-serif;
+            color:  $color-purple;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding-left: 50px;
+            transition: all 0.4s;
+            display: none;
         }
     }
     &__button{
@@ -30,14 +45,17 @@
             @include style-button-hover;
         }
     }
-    &__logo-text{
-        font-family: 'Lato', sans-serif;
-        color:  $color-purple;
-        font-size: 24px;
-        font-weight: 700;
-        text-transform: uppercase;
-        padding-left: 11px;
-    }
+}
+.header__logo:hover{
+    cursor: pointer;
+}
+.header__logo:hover .header__logo-link{
+    background-image: url(../img/img_320/header-logo__320-hover.png);
+    transition: all 0.4s;
+}
+.header__logo:hover .header__logo-text{
+        color: $color-white;
+        transition: all 0.4s;     
 }
 .toggle__menu{
         display: flex;

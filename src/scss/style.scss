@@ -63,15 +63,19 @@ body{
 @import "_footer";
 
 @media (max-width: 320px) {
-    .header__logo-text{
-        display: none;
+    .header__logo{
+        &-link{
+            width: 43px;
+        }
     }
 }
 //======================320======================//
 @media (min-width: 320px) and (max-width: 400px) {
-    .header__logo-text{
-        display: none;
-    }
+    .header__logo{
+        &-link{
+            width: 43px;
+        }
+    }   
 }
 //======================480======================//
 @media (min-width: 401px) and (max-width: 480px) {
@@ -86,6 +90,13 @@ body{
         &__content{
             padding: 0 15px;
         }
+        &__logo{
+            width: 40%;
+            &-text{
+                display: block;
+            }
+        }
+        
     }
     .navbar__item-link{
         font-size: 24px;
@@ -110,12 +121,11 @@ body{
     }
     .bottom__button{
         font-size: 21px;
-        width: 380px;
+        width: 330px;
     }
     .intro{
-        padding: 50px 0 78px 0;
         &__wrap{
-            padding: 0 15px;
+            padding: 50px 15px 78px 15px;
         }
         &__title{
             font-size: 35px; 
@@ -129,15 +139,15 @@ body{
     }
     .information{
         width: 100%;
+        &__text {
+            padding: 0 47px 0 47px;
+        }
     }
-    .information__text {
-        padding: 0 47px 0 47px;
-    }
+    
     .about {
-        padding: 77px 0 96px 0;
         background-image: url(../img/img_480/bg-about__480.jpg);
         &__wrap{
-            padding: 0 15px;
+            padding: 77px 15px 0 15px;
         }
         &__title{
             font-size: 42px;
@@ -145,7 +155,7 @@ body{
     }
     .price{
         &__wrap{
-            padding: 77px 15px 0 15px; 
+            padding: 70px 15px 96px 15px; 
         }
         &__title{
             font-size: 42px;
@@ -166,13 +176,15 @@ body{
             height: 118px;
             padding: 0 10px;
         }
-        /* &__logo{
-            width: 60%;
-        } */
-    }
-    .header__button{
-        font-size: 16px;
-        padding: 12px 35px;
+        &__logo{
+            &-text{
+                display: block;
+            }
+        }
+        &__button{
+            font-size: 16px;
+            padding: 12px 35px;
+        }
     }
     .toggle{
         width: 100%;
@@ -227,9 +239,8 @@ body{
         width: 390px;
     }
     .intro {
-        padding: 48px 0 98px 0;
         &__wrap {
-            padding: 0 10px;
+            padding: 48px 10px 98px 10px;
         }
         &__title{
             font-size: 42px;
@@ -242,18 +253,18 @@ body{
         }
     }
     .about {
-        padding: 80px 0 90px 0;
         background-image: url(../img/img_768/bg-about__768.jpg);
         &__wrap{
-            padding: 0 10px;
+            padding: 80px 10px 17px 10px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: baseline;
         }
         &__title{
             font-size: 42px;
         }
-        &__bottomText{
+        &__bottomtext{
+            font-family: 'Lato', sans-serif;
             display: block;
             color: rgba(162, 145, 165, 0.6);
             padding-bottom: 17px;
@@ -275,20 +286,154 @@ body{
         width: 100%;
     }
     .benefits{
-        margin-bottom: 92px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin: 0 20px 92px 20px;
         min-width: 30%;
-        
-        /* &:hover{
+        &:hover{
             transform: scale(1.15);
         }
         &__active{
             transform: scale(1.15);
-        } */
-        &__license{
-
         }
     }
-    
+}
+//======================768======================//
+@media (min-width: 993px) {
+    .container{
+        max-width: 1200px;
+    }
+    .header{
+        background-image: url(../img/img_1200/header-banner__1200.jpg);
+        &__content{
+            justify-content: flex-end;
+            height: 100px;
+            padding: 0;
+        }
+        &__logo{
+            &-text{
+                display: block;
+            }
+        }
+        &__button{
+            order: 1;
+            width: 75px;
+            margin-left: 20px;
+        }
+    }
+    .toggle{
+        width: 74%;
+        display: flex;
+        justify-content: flex-end;
+        &__menu{
+            display: none;
+        }
+    }
+    .navbar{
+        position: relative;
+        opacity: 1;
+        top: 0;
+        display: flex;
+        justify-content: space-around;
+        width: 500px;
+        &__item{
+            background-color: transparent;
+            border-bottom: none;
+            &-link{
+                padding-bottom: 0;
+                padding-top: 0;
+                font-size: 16px;
+                font-weight: 700;
+                color: $color-purple;
+                transition: all 0.4s;
+                &:hover{
+                    transition: all 0.4s;
+                    color: $color-white;
+                }
+            }
+            &-link:before{
+                display: none;
+            }
+            &-first{
+                display: none;
+            }
+        }
+    }
+    .headline{
+        padding: 60px 0 0 0;
+        &__title{
+            font-size: 82px;
+        }
+        &__sub{
+            font-size: 30px;
+        }
+        &__version{
+            font-size: 16px;
+        }
+    }
+    .bottom__button{
+        font-size: 21px;
+        width: 390px;
+    }
+    .intro{
+        &__wrap{
+            padding: 48px 0 70px 0;
+        }
+        &__title{
+            padding-top:67px;
+            font-size: 54px;
+        }
+        &__sub{
+            font-size: 21px;
+            line-height: 30px;
+            padding: 40px 0 40px 0;
+        }
+    }
+    .about{
+        background-image: url(../img/img_1200/bg-about__1200.jpg);
+        &__title{
+            font-size: 48px;
+            width: 100%;
+        }
+        &__wrap{
+            padding: 98px 0 0 0;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: none;
+        }
+        &__bottomtext {
+            font-family: 'Lato', sans-serif;
+            display: block;
+            color: rgba(162, 145, 165, 0.6);
+            line-height: 21px;
+            width: 70%;
+            margin: 0 auto;
+        }
+        &__bottomtext:after{
+            content: "";
+            margin: 0 auto;
+            margin-top: 10px;
+            display: block;
+            height: 2px;
+            width: 85%;
+            background-color: rgba(255,255,255,.15);
+        }
+    }
+    .information {
+        width: 30%;
+    }
+    .price__wrap {
+        padding: 89px 0 90px 0;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .price__title{
+        font-size: 48px;
+        padding-bottom: 122px;
+        width: 100%;
+    }
+    .benefits{
+        margin: 0 7px 0 7px;
+        max-width: 23%;
+    }
 }

@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     &__wrap{
-        padding: 0 6px;
+        padding: 60px 6px 0 6px;
         text-align: center;
         display: flex;
         flex-wrap: wrap;
@@ -19,9 +19,9 @@
         font-weight: 700;
         line-height: 50px;
         margin: 0 auto;
-        padding-bottom: 100px;
+        padding-bottom: 49px;
     }
-    &__bottomText{
+    &__bottomtext{
         display: none;
     }
 }
@@ -47,7 +47,7 @@
 }
 .price{
     &__wrap{
-        padding: 70px 6px 0 6px;
+        padding: 70px 6px 90px 6px;
         text-align: center;
     }
     &__title{
@@ -123,7 +123,6 @@
         transition: all 0.4s;
         background-color: rgba(57, 42, 58, 0.5);
     }
-
 }
 .benefits:hover .benefits__title{
     background-color: rgba(57, 42, 58, 0.6);
