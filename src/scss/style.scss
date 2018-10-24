@@ -46,15 +46,19 @@ body{
 @import "_sectionAbout";
 
 @media (max-width: 320px) {
-    .header__logo-text{
-        display: none;
+    .header__logo{
+        &-link{
+            width: 43px;
+        }
     }
 }
 //======================320======================//
 @media (min-width: 320px) and (max-width: 400px) {
-    .header__logo-text{
-        display: none;
-    }
+    .header__logo{
+        &-link{
+            width: 43px;
+        }
+    }   
 }
 //======================480======================//
 @media (min-width: 401px) and (max-width: 480px) {
@@ -69,6 +73,13 @@ body{
         &__content{
             padding: 0 15px;
         }
+        &__logo{
+            width: 40%;
+            &-text{
+                display: block;
+            }
+        }
+        
     }
     .navbar__item-link{
         font-size: 24px;
@@ -111,15 +122,15 @@ body{
     }
     .information{
         width: 100%;
+        &__text {
+            padding: 0 47px 0 47px;
+        }
     }
-    .information__text {
-        padding: 0 47px 0 47px;
-    }
+    
     .about {
-        padding: 77px 0 96px 0;
         background-image: url(../img/img_480/bg-about__480.jpg);
         &__wrap{
-            padding: 0 15px;
+            padding: 77px 15px 0 15px;
         }
         &__title{
             font-size: 42px;
@@ -127,7 +138,7 @@ body{
     }
     .price{
         &__wrap{
-            padding: 77px 15px 0 15px; 
+            padding: 70px 15px 96px 15px; 
         }
         &__title{
             font-size: 42px;
@@ -148,10 +159,15 @@ body{
             height: 118px;
             padding: 0 10px;
         }
-    }
-    .header__button{
-        font-size: 16px;
-        padding: 12px 35px;
+        &__logo{
+            &-text{
+                display: block;
+            }
+        }
+        &__button{
+            font-size: 16px;
+            padding: 12px 35px;
+        }
     }
     .toggle{
         width: 100%;
@@ -220,10 +236,9 @@ body{
         }
     }
     .about {
-        padding: 80px 0 17px 0;
         background-image: url(../img/img_768/bg-about__768.jpg);
         &__wrap{
-            padding: 0 10px;
+            padding: 80px 10px 17px 10px;
             display: flex;
             justify-content: space-between;
             align-items: baseline;
@@ -231,7 +246,7 @@ body{
         &__title{
             font-size: 42px;
         }
-        &__bottomText{
+        &__bottomtext{
             font-family: 'Lato', sans-serif;
             display: block;
             color: rgba(162, 145, 165, 0.6);
@@ -277,7 +292,9 @@ body{
             padding: 0;
         }
         &__logo{
-            width: 38%;
+            &-text{
+                display: block;
+            }
         }
         &__button{
             order: 1;
@@ -286,7 +303,9 @@ body{
         }
     }
     .toggle{
-        width: 50%;
+        width: 74%;
+        display: flex;
+        justify-content: flex-end;
         &__menu{
             display: none;
         }
@@ -297,7 +316,7 @@ body{
         top: 0;
         display: flex;
         justify-content: space-around;
-        
+        width: 500px;
         &__item{
             background-color: transparent;
             border-bottom: none;
@@ -361,20 +380,31 @@ body{
             padding: 98px 0 0 0;
             justify-content: space-between;
             align-items: baseline;
+            border-bottom: none;
         }
-        &__bottomText {
+        &__bottomtext {
             font-family: 'Lato', sans-serif;
             display: block;
             color: rgba(162, 145, 165, 0.6);
-            padding: 133px 0 77px 0;
             line-height: 21px;
+            width: 70%;
+            margin: 0 auto;
+        }
+        &__bottomtext:after{
+            content: "";
+            margin: 0 auto;
+            margin-top: 10px;
+            display: block;
+            height: 2px;
+            width: 85%;
+            background-color: rgba(255,255,255,.15);
         }
     }
     .information {
         width: 30%;
     }
     .price__wrap {
-        padding: 89px 0 0 0;
+        padding: 89px 0 90px 0;
         text-align: center;
         display: flex;
         flex-wrap: wrap;
@@ -387,6 +417,6 @@ body{
     }
     .benefits{
         margin: 0 7px 0 7px;
-        max-width: 250px;
+        max-width: 23%;
     }
 }
