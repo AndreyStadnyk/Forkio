@@ -49,6 +49,11 @@ gulp.task('script', function () {
       .pipe(gulp.dest('./dist/js'))
 }); // объединяем файлы JS в один, минифицируем, записываем в dist
 
+gulp.task('lib', function () {
+    gulp.src('./src/libs/**/*.*')
+      .pipe(gulp.dest('./dist/libs'))
+});
+
 gulp.task('clean', function(){
     return del('dist');
 });
@@ -77,7 +82,7 @@ gulp.task('copyReset', function() {
 })
 
 gulp.task('build', function(){
-    runSequence('clean', ['copyReset', 'styles', 'copyImages', 'copyHtml', 'script'], function(){
+    runSequence('clean', ['copyReset', 'styles', 'copyImages', 'copyHtml', 'script', 'lib'], function(){
     console.log('=== BUILD DONE ===');
     });
 });  //последовательно запускаем команды
@@ -87,6 +92,7 @@ gulp.task('watch', function(){
     gulp.watch('src/scss/**/*.*', ['styles']);
     gulp.watch('src/img/**/*.*', ['copyImages']);
     gulp.watch('src/js/**/*.js', ['script']);
+    gulp.watch('src/libs/**/*.*', ['lib']);
     gulp.watch('src/*.html', ['copyHtml']);
 });
 
