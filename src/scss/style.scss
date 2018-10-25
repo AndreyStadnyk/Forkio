@@ -55,6 +55,13 @@ body{
     line-height: 23px;
 }
 
+@mixin benefits-button-hover{
+    background-color:  rgba(255, 255, 255, 0.7);
+    color:  #7f6d78;
+    font-weight: 700;
+    transition: all 0.4s;
+    cursor: pointer;
+}
 @import "_header";
 @import "_feautures";
 @import "_social";
@@ -174,7 +181,7 @@ body{
         &__content{
             flex-wrap: wrap;
             height: 118px;
-            padding: 0 10px;
+            padding: 0;
         }
         &__logo{
             &-text{
@@ -222,7 +229,7 @@ body{
         }
     }
     .headline{
-        padding: 50px 10px 0 10px;
+        padding: 50px 0 0 0;
         &__title{
             font-size: 72px;
             padding-bottom: 26px;
@@ -233,14 +240,13 @@ body{
         }
     }
     
-    
     .bottom__button{
         font-size: 21px;
         width: 390px;
     }
     .intro {
         &__wrap {
-            padding: 48px 10px 98px 10px;
+            padding: 48px 0 98px 0;
         }
         &__title{
             font-size: 42px;
@@ -255,7 +261,7 @@ body{
     .about {
         background-image: url(../img/img_768/bg-about__768.jpg);
         &__wrap{
-            padding: 80px 10px 17px 10px;
+            padding: 80px 0 17px 0;
             display: flex;
             justify-content: space-between;
             align-items: baseline;
@@ -267,7 +273,6 @@ body{
             font-family: 'Lato', sans-serif;
             display: block;
             color: rgba(162, 145, 165, 0.6);
-            padding-bottom: 17px;
             line-height: 21px;
         }
     }
@@ -275,7 +280,7 @@ body{
         width: 45%;
     }
     .price__wrap {
-        padding: 80px 10px 0 10px;
+        padding: 80px 0 0 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -294,6 +299,12 @@ body{
         &__active{
             transform: scale(1.15);
         }
+        &__button:hover{
+            @include benefits-button-hover;
+        }
+        &__button-active{
+            @include benefits-button-hover;
+        }
     }
 }
 //======================768======================//
@@ -304,7 +315,7 @@ body{
     .header{
         background-image: url(../img/img_1200/header-banner__1200.jpg);
         &__content{
-            justify-content: flex-end;
+            justify-content: space-between;
             height: 100px;
             padding: 0;
         }
@@ -315,12 +326,10 @@ body{
         }
         &__button{
             order: 1;
-            width: 75px;
-            margin-left: 20px;
         }
     }
     .toggle{
-        width: 74%;
+        width: 70%;
         display: flex;
         justify-content: flex-end;
         &__menu{
@@ -333,7 +342,7 @@ body{
         top: 0;
         display: flex;
         justify-content: space-around;
-        width: 500px;
+        width: 70%;
         &__item{
             background-color: transparent;
             border-bottom: none;
@@ -388,6 +397,7 @@ body{
         }
     }
     .about{
+        
         background-image: url(../img/img_1200/bg-about__1200.jpg);
         &__title{
             font-size: 48px;
@@ -435,5 +445,11 @@ body{
     .benefits{
         margin: 0 7px 0 7px;
         max-width: 23%;
+        &__button:hover{
+            @include benefits-button-hover;
+        }
+        &__button-active{
+            @include benefits-button-hover;
+        }
     }
 }
