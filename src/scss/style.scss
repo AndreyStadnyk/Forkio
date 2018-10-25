@@ -299,6 +299,12 @@ body{
         &__active{
             transform: scale(1.15);
         }
+        &__button:hover{
+            @include benefits-button-hover;
+        }
+        &__button-active{
+            @include benefits-button-hover;
+        }
     }
 }
 //======================768======================//
@@ -320,8 +326,6 @@ body{
         }
         &__button{
             order: 1;
-            
-            
         }
     }
     .toggle{
@@ -441,5 +445,11 @@ body{
     .benefits{
         margin: 0 7px 0 7px;
         max-width: 23%;
+        &__button:hover{
+            @include benefits-button-hover;
+        }
+        &__button-active{
+            @include benefits-button-hover;
+        }
     }
 }

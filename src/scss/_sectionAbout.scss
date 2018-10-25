@@ -119,12 +119,7 @@
         color:  $color-white;
         text-transform: uppercase;
         transition: all 0.4s;
-        &:hover{
-            @include benefits-button-hover;
-        }
-        &-active{
-            @include benefits-button-hover;
-        }
+        cursor: pointer;
     }
 }
 .benefits:hover .benefits__title{
