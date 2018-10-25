@@ -72,6 +72,23 @@ body{
     .header__logo-text{
         display: none;
     }
+    
+    .feautures-content{
+        
+        img{
+            margin-top: 0px;
+        };
+        
+        &__subtitle{
+            margin: 34px auto 21px;   
+        }
+    }
+    
+    .footer-logo__logo{
+      img{
+        display: none;
+      }
+    }
 }
 //======================480======================//
 @media (min-width: 401px) and (max-width: 480px) {
@@ -110,7 +127,7 @@ body{
     }
     .bottom__button{
         font-size: 21px;
-        width: 380px;
+        width: 83%;
     }
     .intro{
         padding: 50px 0 78px 0;
@@ -127,6 +144,52 @@ body{
             padding: 0 0 44px 0;
         }
     }
+    
+.feautures{
+    padding: 89px 10px 6px 10px;
+    
+    &__title{
+      font-size: 42px;
+      line-height: 52px;
+      padding: 0 79px 68px;
+    }
+    
+    &-content{
+        margin: 0 15px;
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+//        img{
+//            width: 39%;
+//        }
+        
+        &__text{
+            width: 61%;
+            text-align: left;
+            line-height: 21px;
+            margin-left: 5%;
+            margin-bottom: 46px;
+        }
+
+        &__subtitle{
+            display: inline-block;
+            color:  #323232;
+            font-size: 16px;
+            font-weight: 400;   
+        }
+    }
+    
+    >img{
+        height: 519px;
+    }
+}
+
+    
+    
+    
     .information{
         width: 100%;
     }
@@ -153,7 +216,30 @@ body{
             line-height: 45px;
         }
     }
+    
+footer{
+       padding: 0 34px 39px;
+       line-height: 28px;
+    }
+
+.footer-logo{ 
+    &__logo{
+        border-bottom: 1px solid #f4f4f4;
+        padding-bottom: 8px;
+        
+        img{
+            margin-right: 11px;
+        }
+    }
 }
+
+.footer-contacts{
+    width: 220px;
+}
+
+}
+
+
 //======================768======================//
 @media (min-width: 481px) and (max-width: 992px) {
     .header{
@@ -241,6 +327,46 @@ body{
             padding: 38px 0;
         }
     }
+    
+    .feautures{
+       padding: 47px 10px 6px 10px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       background-color: #f4f4f4;
+       text-align: center;
+    
+    &__title{
+       font-size: 42px;
+       padding-bottom: 65px;
+    }
+    
+    &-content{
+       margin: 0 33px;
+       display: flex;
+       flex-direction:row;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       align-items: flex-start;
+        
+       &__text{
+          font-size: 14px;
+          width: 565px;
+          text-align: left;
+          line-height: 21px; 
+          margin-bottom: 46px;
+        }
+    }
+    
+    >img{
+        position: relative;
+        left: 110px;
+        height: 380px;
+    }
+}
+
+
+    
     .about {
         padding: 80px 0 90px 0;
         background-image: url(../img/img_768/bg-about__768.jpg);
