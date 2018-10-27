@@ -73,6 +73,97 @@ body{
         display: none;
     }
     
+    .social{
+    padding: 65px 50px 6px;
+    text-align: center;
+    
+    .social-carousel{
+        
+        &__slide{
+            
+            >p{
+              padding-top: 23px;
+            }            
+        }
+        
+        &__slide-user{
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            img{
+                margin: 0 auto;
+            }
+            
+            div{
+                text-align: center;
+            }
+        }
+        
+        &__slide-userName{
+            margin-top: 25px;
+        }
+}
+    
+    .social-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        >div{
+           display: flex;
+           flex-direction: column;
+           align-items: center;   
+        }
+        
+        button{
+            margin-top: 30px;
+            padding: 0;
+            width: 280px;
+            height: 50px;
+            border-radius: 4px;
+            font-size: 21px;
+    
+            i{
+
+            }
+            
+            span{
+                margin: 0 0 0 ;
+                font-size: 21px;
+                display: inline-block;
+                width: 210px;
+                
+//                text-align: center;
+                
+            }
+        }
+        
+        &__git{
+            color:  #000000;
+            background-color:  #f3f3f3; 
+        }
+        
+        &__twit{
+            color: $color-white;
+            background-color:  #26a6d1;
+        }
+        
+        &__fb{
+            color: $color-white;
+            background-color:  #3b5998;
+        }
+        
+        &__followers{
+            margin-top: 18px;
+            color: $color-lightblue;
+            font-size: 14px;
+        }
+    }
+}
+
+    
     .feautures-content{
         
         img{
@@ -162,23 +253,11 @@ body{
         justify-content: space-between;
         align-items: flex-start;
         
-//        img{
-//            width: 39%;
-//        }
-        
         &__text{
             width: 61%;
             text-align: left;
-            line-height: 21px;
             margin-left: 5%;
             margin-bottom: 46px;
-        }
-
-        &__subtitle{
-            display: inline-block;
-            color:  #323232;
-            font-size: 16px;
-            font-weight: 400;   
         }
     }
     
@@ -186,9 +265,6 @@ body{
         height: 519px;
     }
 }
-
-    
-    
     
     .information{
         width: 100%;
@@ -351,22 +427,50 @@ footer{
         
        &__text{
           font-size: 14px;
-          width: 565px;
+          width: 70%;
           text-align: left;
-          line-height: 21px; 
+          line-height: 21px;
+          margin-left: 3%;
           margin-bottom: 46px;
         }
     }
     
     >img{
         position: relative;
-        left: 110px;
-        height: 380px;
+        left: 0px;
+        height: 475px;
     }
 }
-
-
+   
+    .social{
+        padding-top: 50px;
     
+       .social-buttons{
+           margin-top: 25px;
+           display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
+           
+           &__git-block, &__twit-block {
+               width: 50%;
+           }
+           
+           &__fb-block{
+              width: 100%;
+           }
+           
+           &:before{
+              content: '';
+              display: block;
+              height: 1px;
+              width: 100%;
+              background-color: #f4f4f4;
+           }
+           
+           
+        }
+}
+        
     .about {
         padding: 80px 0 90px 0;
         background-image: url(../img/img_768/bg-about__768.jpg);
@@ -417,4 +521,69 @@ footer{
         }
     }
     
+    footer{
+       padding: 0 40px 45px;
+       display: flex;
+       justify-content: space-between;
+       flex-wrap: wrap;
+}
+
+.footer-logo{
+    width: 45%;
+    margin-top: 55px;
+    &__logo{
+        
+        img{
+           margin-right: 17px;
+        }
+    }
+    
+    p{
+      margin-top: 36px;
+      @include footer-text;
+      line-height: 21px;
+    }
+}
+
+.footer-navigation{
+    width: 45%;
+    span{
+      @include footer-title;
+      margin-top: 55px;    
+    }
+    
+    ul{
+      margin-top: 23px;
+      color: $color-purple;
+      font-size: 15px;
+      line-height: 23px;
+    }   
+}
+
+.footer-contacts{
+    width: 45%;
+    margin-top: 38px;
+    &__tel{
+      color:  #31384d;
+      font-size: 30px;
+      font-weight: 700;    
+    }
+    
+    &__work-time{
+      font-size: 12px;
+    }
+    
+    &__city{
+      @include footer-title;
+    }
+    
+    p{
+      margin-top: 20px;
+      @include footer-text;
+    }
+}
+
+.footer-info{
+    width: 45%;
+}
 }
