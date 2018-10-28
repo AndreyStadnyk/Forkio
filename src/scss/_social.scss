@@ -1,46 +1,56 @@
 .social{
-    padding: 65px 65px 6px;
+    margin: 0 auto;
+    padding: 120px 65px 6px;
     text-align: center;
     font-weight: 400;
     
     .social-carousel{
-        
-        &__userName{
-            color:  #474747;
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 32px;
-        }
-        
-        &__userLog{
-            color:  $color-purple;
-            font-size: 16px;
-            line-height: 32px;
-            margin: 0 auto 25px;
-            
-        }
+        margin: 0 auto;
         
         &__slide{
+            margin: 0 auto;
             
-            display: flex;
-            flex-direction: column;
-            
-            img{
-                margin: 0 auto 25px;
-            }
-            
-            p{
+            >p{
               font-family: Lato;
               font-size: 17px;
               line-height: 24px;
+              padding-top: 40px;
             } 
             
-            span{
+            >span{
                 color:  #848e97;
                 font-size: 16px;
+                line-height: 60px;
+                margin-top: 22px;
+            }
+        }
+
+        &__slide-user{
+            margin: 0 auto;
+            width: 300px;
+            display: flex;
+
+            img{
+                margin-right: 25px;
+            }
+
+            div{
+                text-align: left;
                 line-height: 32px;
-                
-                }
+            }
+        }
+
+        &__slide-userName{
+            display: inline-block;
+            margin-top: 13px;
+            color:  #474747;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        &__slide-userLog{
+            color: $color-purple;
+            font-size: 16px;
         }
     }
     
@@ -49,6 +59,12 @@
         flex-direction: column;
         align-items: center;
         
+        >div{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+        }
+
         button{
             margin-top: 30px;
             padding: 0;
@@ -62,7 +78,6 @@
             }
             
             span{
-                
                 margin: 0 0 0 ;
                 font-size: 21px;
                 display: inline-block;
@@ -88,7 +103,7 @@
             background-color:  #3b5998;
         }
         
-        >span{
+        &__followers{
             margin-top: 18px;
             color: $color-lightblue;
             font-size: 14px;
