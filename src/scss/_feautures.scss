@@ -15,12 +15,29 @@
     
     &-content{
         margin: 0 15px;
+        max-width: 657px;
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        img{
-            margin-top: 5px;
+        &__img1{
+            @include feautures-content__img;
+            background-image: url(../img/img_320/icon1.png);
+        }
+
+        &__img2{
+              @include feautures-content__img;
+              background-image: url(../img/img_320/icon2.png);
+        }
+
+        &__img3{
+              @include feautures-content__img;
+              background-image: url(../img/img_320/icon3.png);
+        }
+
+        &__img4{
+              @include feautures-content__img;
+              background-image: url(../img/img_320/icon4.png);
         }
 
         &__text{
@@ -41,12 +58,13 @@
         }
     }
     
-    >img{
-        position: relative;
-        left: 110px;
-        height: 380px;
-//        overflow: hidden;
-    }
+
+//    >img{
+//        position: relative;
+//        left: 110px;
+//        height: 380px;
+////        overflow: hidden;
+//    }
 }
 
 

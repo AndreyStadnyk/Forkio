@@ -42,6 +42,15 @@ body{
     transition: all 0.4s;
 }
 
+@mixin feautures-content__img{
+    margin-top: 5px;
+    height: 84px;
+    width: 27%;
+    min-width: 111px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 @mixin footer-title{
     display: inline-block;
     margin-top: 38px;
@@ -82,11 +91,20 @@ body{
         &-link{
             width: 43px;
         }
-    }   
+    }
+
+    .feautures{
+        &__img{
+           height: 381px;
+           width: 317px;
+           margin-bottom: 15px;
+           background-image: url(../img/img_320/editor.png);
+        }
+    }
 
     .social{
-    padding: 65px 50px 6px;
-    text-align: center;
+       padding: 65px 50px 6px;
+       text-align: center;
 
     .social-carousel{
 
@@ -121,6 +139,7 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 70px;
 
         >div{
            display: flex;
@@ -175,22 +194,43 @@ body{
 }
 
 
-    .feautures-content{
+    .feautures{
+       &-content{
+           img{
+              margin-top: 0px;
+           };
 
-        img{
-            margin-top: 0px;
-        };
+           &__subtitle{
+              margin: 34px auto 21px;
+           }
+       }
 
-        &__subtitle{
-            margin: 34px auto 21px;
+        >img{
+           position: relative;
+           left: 125px;
+           height: 381px;
         }
+
     }
+
+
+
+
 
     .footer-logo__logo{
-      img{
-        display: none;
-      }
+       margin-top: 40px;
+
+       img{
+       display: none;
+       }
     }
+
+    .footer-navigation{
+       span{
+         margin-top: 36px;
+       }
+    }
+
 }
 //======================480======================//
 @media (min-width: 401px) and (max-width: 480px) {
@@ -253,35 +293,46 @@ body{
         }
     }
 
-.feautures{
-    padding: 89px 10px 6px 10px;
+   .feautures{
+      padding: 89px 10px 6px 10px;
 
-    &__title{
-      font-size: 42px;
-      line-height: 52px;
-      padding: 0 79px 68px;
-    }
+      &__title{
+         font-size: 42px;
+         line-height: 52px;
+         padding: 0 79px 68px;
+      }
 
-    &-content{
-        margin: 0 15px;
-        display: flex;
-        flex-direction:row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
+      &-content{
+         margin: 0 26px;
+         display: flex;
+         flex-direction:row;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: flex-start;
 
-        &__text{
-            width: 61%;
-            text-align: left;
-            margin-left: 5%;
-            margin-bottom: 46px;
+          &__text{
+             width: 62%;
+             text-align: left;
+             margin-bottom: 46px;
+          }
+      }
+
+//      &__img{
+//         height: 519px;
+//         width: 468px;
+//         margin-bottom: 10px;
+//         background-image: url(../img/img_480/editor.png);
+//      }
+        >img{
+           position: relative;
+           left: 145px;
+           height: 519px;
         }
-    }
-
-    >img{
-        height: 519px;
-    }
 }
+
+    .social-buttons{
+        margin-bottom: 60px;
+    }
 
     .information{
         width: 100%;
@@ -317,6 +368,8 @@ footer{
 
 .footer-logo{
     &__logo{
+
+        margin-top: 40px;
         border-bottom: 1px solid #f4f4f4;
         padding-bottom: 8px;
 
@@ -442,20 +495,45 @@ footer{
        justify-content: space-between;
        align-items: flex-start;
 
+       &__img1{
+          width: 15%;
+       }
+
+       &__img2{
+          width: 15%;
+       }
+
+       &__img3{
+          width: 15%;
+       }
+
+       &__img4{
+          width: 15%;
+       }
+
        &__text{
           font-size: 14px;
-          width: 70%;
+          width: 75%;
           text-align: left;
           line-height: 21px;
-          margin-left: 3%;
+//          margin-left: 3%;
           margin-bottom: 46px;
         }
     }
 
+//    &__img{
+//         height: 70vw;
+//         width: 90%;
+//         margin-bottom: 10px;
+//         background-image: url(../img/img_768/editor.png);
+//         background-size: contain
+//;
+//    }
+
     >img{
         position: relative;
         left: 0px;
-        height: 475px;
+        height: 519px;
     }
 }
 
@@ -463,10 +541,15 @@ footer{
         padding-top: 50px;
 
        .social-buttons{
-           margin-top: 25px;
+
+           margin-bottom: 60px;
            display: flex;
            flex-direction: row;
            flex-wrap: wrap;
+
+           button{
+              width: 240px;
+           }
 
            &__git-block, &__twit-block {
                width: 50%;
@@ -482,11 +565,12 @@ footer{
               height: 1px;
               width: 100%;
               background-color: #f4f4f4;
+              margin-bottom: 30px;
            }
 
 
         }
-}
+   }
 
     .about {
         background-image: url(../img/img_768/bg-about__768.jpg);
@@ -536,8 +620,45 @@ footer{
             @include benefits-button-hover;
         }
     }
+
+    footer{
+       padding: 55px 40px 40px;
+       display: flex;
+       justify-content: space-between;
+       flex-wrap: wrap;
+   }
+
+    .footer-logo{
+        width: 45%;
+        &__logo{
+
+            img{
+               margin-right: 17px;
+            }
+        }
+    }
+
+    .footer-navigation{
+        width: 45%;
+        span{
+          margin-top: 0px;
+        }
+    }
+
+    .footer-contacts{
+        width: 45%;
+    }
+
+    .footer-info{
+        width: 45%;
+
+        span{
+            margin-top: 34px;
+        }
+    }
 }
-//======================768======================//
+
+//======================1200======================//
 @media (min-width: 993px) {
     .container{
         max-width: 1200px;
@@ -626,6 +747,38 @@ footer{
             padding: 40px 0 40px 0;
         }
     }
+
+
+    .social{
+        padding-top: 87px;
+
+       .social-buttons{
+           margin: 50px auto 80px;
+           display: flex;
+           flex-direction: row;
+           justify-content: space-between;
+           flex-wrap: wrap;
+           max-width: 1040px;
+
+           button{
+              width: 240px;
+           }
+
+           &__git-block, &__twit-block, &__fb-block {
+               width: 33%;
+           }
+
+           &:before{
+              content: '';
+              display: block;
+              height: 1px;
+              width: 100%;
+              background-color: #f4f4f4;
+               margin-bottom: 30px;
+           }
+       }
+   }
+
     .about{
         
         background-image: url(../img/img_1200/bg-about__1200.jpg);
@@ -684,68 +837,44 @@ footer{
     }
 
     footer{
-       padding: 0 40px 45px;
+       padding: 60px 90px;
        display: flex;
        justify-content: space-between;
        flex-wrap: wrap;
-}
+   }
 
-.footer-logo{
-    width: 45%;
-    margin-top: 55px;
-    &__logo{
+    .footer-logo{
+        width: 28%;
+        &__logo{
 
-        img{
-           margin-right: 17px;
+            img{
+               margin-right: 17px;
+            }
+        }
+
+        p{
+            margin-top: 24px;
         }
     }
 
-    p{
-      margin-top: 36px;
-      @include footer-text;
-      line-height: 21px;
-    }
-}
-
-.footer-navigation{
-    width: 45%;
-    span{
-      @include footer-title;
-      margin-top: 55px;
+    .footer-navigation{
+        width: 22%;
+        span{
+          margin-top: 0px;
+        }
     }
 
-    ul{
-      margin-top: 23px;
-      color: $color-purple;
-      font-size: 15px;
-      line-height: 23px;
-    }
-}
-
-.footer-contacts{
-    width: 45%;
-    margin-top: 38px;
-    &__tel{
-      color:  #31384d;
-      font-size: 30px;
-      font-weight: 700;
+    .footer-contacts{
+        width: 25%;
+        margin-top: 0px;
     }
 
-    &__work-time{
-      font-size: 12px;
+    .footer-info{
+        width: 25%;
+
+        span{
+           margin-top: 0px;
+        }
     }
 
-    &__city{
-      @include footer-title;
-    }
-
-    p{
-      margin-top: 20px;
-      @include footer-text;
-    }
-}
-
-.footer-info{
-    width: 45%;
-}
 }
