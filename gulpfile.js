@@ -4,7 +4,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat'); //объединяет несколько файлов в один
 var uglify = require('gulp-uglify'); //минификация
-let cleanCSS = require('gulp-clean-css'); //минификация css
+var cleanCSS = require('gulp-clean-css'); //минификация css
 var debug = require('gulp-debug'); //все через себя пропускает и выводит в командной строке, что происходит
 var sourcemaps = require('gulp-sourcemaps'); //спец.структура данных, которая при преобразовании файлов отражает что было и что стало и записывает эту инфу либо в самом файле либо в спец.файле рядом с ним
 var del = require('del'); //удаляем директорию
@@ -14,8 +14,9 @@ var autoprefixer = require('gulp-autoprefixer'); //
 var runSequence = require('run-sequence'); //таски исполняются последовательно и [параллельно, параллельно]
 //var lastRun = require('last-run'); //возвращает дату последнего запуска этой задачи
 var browserSync = require('browser-sync').create();
-var sassGlob = require('gulp-sass-glob');
-
+/* var sassGlob = require('gulp-sass-glob'); */
+var notify = require("gulp-notify");
+var plumber = require('gulp-plumber');//отслеж ошибок
 
 
 gulp.task('hello', function(){
@@ -25,7 +26,15 @@ gulp.task('hello', function(){
 gulp.task('styles', function(){
     console.log('styles work')
     return gulp.src('src/scss/**/*.scss') //находим файлы в папке src по шаблону /**/*.scss
-      .pipe(sassGlob())
+      .pipe(plumber({
+          errorHandler: notify.onError(function(err){
+              return{
+                  title: 'styles',
+                  message: err.message
+              };
+          })
+      }))
+      /* .pipe(sassGlob()) */
       .pipe(sourcemaps.init())   //плагин gulp когда в него поступает новый файл-создает спец.свойство file.sourceMap, в которое записывает, что пока что с файлом ничего не делали. 
       .pipe(sass())              //преобразуем в css
 //      .pipe(debug({title: 'sass'})) //выводим в командную строку что происходит с пометкой 'sass'
