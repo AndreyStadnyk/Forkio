@@ -1,0 +1,43 @@
+.callback{
+    background-color: $color-lightgrey;
+    &__wrap{
+        padding: 30px 6px 42px 6px;
+        text-align: center;
+    }
+    &__title{
+        color:$color-darkgrey;
+        font-size: 24px;
+        font-weight: 700;
+        padding-bottom: 40px;
+        line-height: 30px;
+        &-small{
+            display: none;
+        }
+    }
+    
+}
+.input{
+    &__square{
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 25px;
+        padding: 12px 25px;
+        &::placeholder{
+            color:  #c8cbcf;
+        }
+    }
+    &__button{
+        @include style-button;
+        display: inline-block;
+        font-weight: 400;
+        text-transform: uppercase;
+        &:hover{
+            @include style-button-hover;
+        }
+        &-callme{
+            display: none;
+        }
+    }
+}

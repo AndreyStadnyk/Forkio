@@ -4,6 +4,8 @@
 $color-purple:#8e82ad;
 $color-white: #fff;
 $color-lightblue: #848e97;
+$color-lightgrey: #f4f4f4;
+$color-darkgrey: #323232;
 
 a,li{
     list-style: none;
@@ -67,6 +69,7 @@ body{
 @import "_social";
 @import "_introRevEdit";
 @import "_sectionAbout";
+@import "_callback";
 @import "_footer";
 
 @media (max-width: 320px) {
@@ -309,6 +312,20 @@ body{
             line-height: 45px;
         }
     }
+    .callback{
+        &__wrap{
+            padding: 50px 15px 50px 15px; 
+        }
+        &__title{
+            font-size: 28px;
+            padding-bottom: 50px;
+        }
+    }
+    .input{
+        &__square{
+            width: 75%;
+        }
+    }
 
 footer{
        padding: 0 34px 39px;
@@ -329,7 +346,6 @@ footer{
 .footer-contacts{
     width: 220px;
 }
-
 }
 
 
@@ -536,6 +552,41 @@ footer{
             @include benefits-button-hover;
         }
     }
+    .callback{
+        &__wrap{
+            padding: 25px 0 25px 0;
+        }
+        &__title{
+            &-long{
+                display: none;
+            }
+            &-small{
+                display: block;
+                color: $color-purple;
+                font-size: 30px;
+                padding-bottom: 30px;
+            }
+        }
+        
+    }
+    .input{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__square{
+            width:47%;
+            margin-bottom: 25px;
+        }
+        &__button{
+            &-subscribe{
+                display: none;
+            }
+            &-callme{
+                display: inline-block;
+                margin: 0 auto;
+            }
+        }
+    }
 }
 //======================768======================//
 @media (min-width: 993px) {
@@ -682,70 +733,110 @@ footer{
             @include benefits-button-hover;
         }
     }
-
+    .callback{
+        &__wrap{
+            padding: 54px 0 54px 0;
+            display: flex;
+            
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__title{
+            padding-bottom: 0;
+            &-long{
+                display: none;
+            }
+            &-small{
+                display: block;
+                color: $color-purple;
+                font-size: 30px;
+            }
+        }
+        
+    }
+    .input{
+        display: flex;
+        justify-content: flex-end;
+        width: 77%;
+        &__square{
+            margin-bottom: 0;
+            width: 35%;
+            margin-left: 20px;
+        }
+        &__button{
+            padding: 12px 40px;
+            &-subscribe{
+                display: none;
+            }
+            &-callme{
+                display: inline-block;
+                margin-left: 20px;
+            }
+        }
+    }
     footer{
        padding: 0 40px 45px;
        display: flex;
        justify-content: space-between;
        flex-wrap: wrap;
-}
+    }
 
-.footer-logo{
-    width: 45%;
-    margin-top: 55px;
-    &__logo{
-
-        img{
-           margin-right: 17px;
+    .footer-logo{
+        width: 45%;
+        margin-top: 55px;
+        &__logo{
+    
+            img{
+               margin-right: 17px;
+            }
+        }
+    
+        p{
+          margin-top: 36px;
+          @include footer-text;
+          line-height: 21px;
         }
     }
 
-    p{
-      margin-top: 36px;
-      @include footer-text;
-      line-height: 21px;
-    }
-}
-
-.footer-navigation{
-    width: 45%;
-    span{
-      @include footer-title;
-      margin-top: 55px;
-    }
-
-    ul{
-      margin-top: 23px;
-      color: $color-purple;
-      font-size: 15px;
-      line-height: 23px;
-    }
-}
-
-.footer-contacts{
-    width: 45%;
-    margin-top: 38px;
-    &__tel{
-      color:  #31384d;
-      font-size: 30px;
-      font-weight: 700;
+    .footer-navigation{
+        width: 45%;
+        span{
+          @include footer-title;
+          margin-top: 55px;
+        }
+    
+        ul{
+          margin-top: 23px;
+          color: $color-purple;
+          font-size: 15px;
+          line-height: 23px;
+        }
     }
 
-    &__work-time{
-      font-size: 12px;
+    .footer-contacts{
+        width: 45%;
+        margin-top: 38px;
+        &__tel{
+          color:  #31384d;
+          font-size: 30px;
+          font-weight: 700;
+        }
+    
+        &__work-time{
+          font-size: 12px;
+        }
+    
+        &__city{
+          @include footer-title;
+        }
+    
+        p{
+          margin-top: 20px;
+          @include footer-text;
+        }
     }
 
-    &__city{
-      @include footer-title;
+    .footer-info{
+        width: 45%;
     }
-
-    p{
-      margin-top: 20px;
-      @include footer-text;
-    }
-}
-
-.footer-info{
-    width: 45%;
-}
 }
