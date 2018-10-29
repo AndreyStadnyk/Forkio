@@ -4,6 +4,8 @@
 $color-purple:#8e82ad;
 $color-white: #fff;
 $color-lightblue: #848e97;
+$color-lightgrey: #f4f4f4;
+$color-darkgrey: #323232;
 
 a,li{
     list-style: none;
@@ -67,6 +69,7 @@ body{
 @import "_social";
 @import "_introRevEdit";
 @import "_sectionAbout";
+@import "_callback";
 @import "_footer";
 
 @media (max-width: 320px) {
@@ -168,6 +171,20 @@ body{
             font-size: 42px;
             padding-bottom: 57px;
             line-height: 45px;
+        }
+    }
+    .callback{
+        &__wrap{
+            padding: 50px 15px 50px 15px; 
+        }
+        &__title{
+            font-size: 28px;
+            padding-bottom: 50px;
+        }
+    }
+    .input{
+        &__square{
+            width: 75%;
         }
     }
 }
@@ -304,6 +321,41 @@ body{
         }
         &__button-active{
             @include benefits-button-hover;
+        }
+    }
+    .callback{
+        &__wrap{
+            padding: 25px 0 25px 0;
+        }
+        &__title{
+            &-long{
+                display: none;
+            }
+            &-small{
+                display: block;
+                color: $color-purple;
+                font-size: 30px;
+                padding-bottom: 30px;
+            }
+        }
+        
+    }
+    .input{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__square{
+            width:47%;
+            margin-bottom: 25px;
+        }
+        &__button{
+            &-subscribe{
+                display: none;
+            }
+            &-callme{
+                display: inline-block;
+                margin: 0 auto;
+            }
         }
     }
 }
@@ -452,4 +504,46 @@ body{
             @include benefits-button-hover;
         }
     }
+    .callback{
+        &__wrap{
+            padding: 54px 0 54px 0;
+            display: flex;
+            
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__title{
+            padding-bottom: 0;
+            &-long{
+                display: none;
+            }
+            &-small{
+                display: block;
+                color: $color-purple;
+                font-size: 30px;
+            }
+        }
+        
+    }
+    .input{
+        display: flex;
+        justify-content: flex-end;
+        width: 77%;
+        &__square{
+            margin-bottom: 0;
+            width: 35%;
+            margin-left: 20px;
+        }
+        &__button{
+            padding: 12px 40px;
+            &-subscribe{
+                display: none;
+            }
+            &-callme{
+                display: inline-block;
+                margin-left: 20px;
+            }
+        }
+    }
+    
 }
