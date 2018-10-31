@@ -48,7 +48,7 @@ body{
     width: 27%;
     min-width: 111px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
 }
 
 @mixin footer-title{
@@ -92,19 +92,26 @@ body{
             width: 43px;
         }
     }
-
+    
     .feautures{
-        &__img{
-           height: 381px;
-           width: 317px;
-           margin-bottom: 15px;
-           background-image: url(../img/img_320/editor.png);
-        }
+       &-content{
+           &__subtitle{
+              margin: 34px auto 21px;
+           }
+       }
+
+       &-editor{
+          width: 320px;
+          padding-left: 0px;
+        
+          img{
+             height:  381px;
+          }
+       }
     }
 
     .social{
        padding: 65px 50px 6px;
-       text-align: center;
 
     .social-carousel{
 
@@ -136,91 +143,15 @@ body{
 }
 
     .social-buttons{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         margin-bottom: 70px;
-
-        >div{
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-        }
-
-        button{
-            margin-top: 30px;
-            padding: 0;
-            width: 280px;
-            height: 50px;
-            border-radius: 4px;
-            font-size: 21px;
-
-            i{
-
-            }
-
-            span{
-                margin: 0 0 0 ;
-                font-size: 21px;
-                display: inline-block;
-                width: 210px;
-
-//                text-align: center;
-
-            }
-        }
-
-        &__git{
-            color:  #000000;
-            background-color:  #f3f3f3;
-        }
-
-        &__twit{
-            color: $color-white;
-            background-color:  #26a6d1;
-        }
-
-        &__fb{
-            color: $color-white;
-            background-color:  #3b5998;
-        }
-
-        &__followers{
-            margin-top: 18px;
-            color: $color-lightblue;
-            font-size: 14px;
-        }
     }
 }
-
-
-    .feautures{
-       &-content{
-           img{
-              margin-top: 0px;
-           };
-
-           &__subtitle{
-              margin: 34px auto 21px;
-           }
-       }
-
-        >img{
-           position: relative;
-           left: 125px;
-           height: 381px;
-        }
-
-    }
-
-
-
 
 
     .footer-logo__logo{
        margin-top: 40px;
 
-       img{
+       div{
        display: none;
        }
     }
@@ -304,7 +235,6 @@ body{
 
       &-content{
          margin: 0 26px;
-         display: flex;
          flex-direction:row;
          flex-wrap: wrap;
          justify-content: space-between;
@@ -316,19 +246,15 @@ body{
              margin-bottom: 46px;
           }
       }
-
-//      &__img{
-//         height: 519px;
-//         width: 468px;
-//         margin-bottom: 10px;
-//         background-image: url(../img/img_480/editor.png);
-//      }
-        >img{
-           position: relative;
-           left: 145px;
-           height: 519px;
-        }
-}
+       
+      &-editor{
+         width: 468px;
+        
+         img{
+            height:  519px;
+         }
+      }
+   }
 
     .social-buttons{
         margin-bottom: 60px;
@@ -363,7 +289,6 @@ body{
 
 footer{
        padding: 0 34px 39px;
-       line-height: 28px;
     }
 
 .footer-logo{
@@ -373,7 +298,7 @@ footer{
         border-bottom: 1px solid #f4f4f4;
         padding-bottom: 8px;
 
-        img{
+        div{
             margin-right: 11px;
         }
     }
@@ -475,12 +400,7 @@ footer{
     }
 
     .feautures{
-       padding: 47px 10px 6px 10px;
-       display: flex;
        flex-direction: column;
-       align-items: center;
-       background-color: #f4f4f4;
-       text-align: center;
 
     &__title{
        font-size: 42px;
@@ -489,7 +409,6 @@ footer{
 
     &-content{
        margin: 0 33px;
-       display: flex;
        flex-direction:row;
        flex-wrap: wrap;
        justify-content: space-between;
@@ -512,29 +431,21 @@ footer{
        }
 
        &__text{
-          font-size: 14px;
           width: 75%;
           text-align: left;
           line-height: 21px;
-//          margin-left: 3%;
           margin-bottom: 46px;
         }
     }
-
-//    &__img{
-//         height: 70vw;
-//         width: 90%;
-//         margin-bottom: 10px;
-//         background-image: url(../img/img_768/editor.png);
-//         background-size: contain
-//;
-//    }
-
-    >img{
-        position: relative;
-        left: 0px;
-        height: 519px;
-    }
+        
+    &-editor{
+         width: 758px;
+         padding-left: 10px;
+        
+         img{
+            height:  519px;
+         }
+      }
 }
 
     .social{
@@ -543,12 +454,15 @@ footer{
        .social-buttons{
 
            margin-bottom: 60px;
-           display: flex;
            flex-direction: row;
            flex-wrap: wrap;
 
            button{
               width: 240px;
+              
+              span{
+                width: 170px;  
+              }
            }
 
            &__git-block, &__twit-block {
@@ -747,14 +661,83 @@ footer{
             padding: 40px 0 40px 0;
         }
     }
+    
+    .feautures{
+       padding: 84px 60px 6px 90px;
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: flex-start;
+       
 
+    &__title{
+        display: none;
+    }
+
+    &-content{
+       width: 40%;
+       margin: 0;
+       flex-direction:row;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       align-items: flex-start;
+       max-width: 484px;
+
+       &__img1{
+          width: 15%;
+       }
+
+       &__img2{
+          width: 15%;
+       }
+
+       &__img3{
+          width: 15%;
+       }
+
+       &__img4{
+          width: 15%;
+       }
+
+       &__text{
+          width: 67%;
+          text-align: left;
+          margin-bottom: 46px;
+        }
+    }
+        
+    &-editor{
+       width: 59%;
+       padding-left: 10px;
+       overflow: visible;
+       
+       &__subtitle{
+          padding-left: 10px;
+          display: inline-block;
+          color:  $color-purple;
+          font-size: 48px;
+          font-weight: 700;
+          padding-bottom: 29px;
+       }
+        
+        &__img768{
+            display: none;
+        }
+        
+        &__img1200{
+            display:inline-block; 
+        }
+        
+       img{
+          height:  519px;
+       }
+    }
+}
 
     .social{
         padding-top: 87px;
 
        .social-buttons{
            margin: 50px auto 80px;
-           display: flex;
            flex-direction: row;
            justify-content: space-between;
            flex-wrap: wrap;
@@ -762,6 +745,10 @@ footer{
 
            button{
               width: 240px;
+               
+              span{
+                width: 170px;  
+              }
            }
 
            &__git-block, &__twit-block, &__fb-block {

@@ -5,25 +5,41 @@ footer{
 
 .footer-logo{
     &__logo{
-//      img{
-//      display: none;
-//      }
-      
-      color:  $color-purple;
+      display: flex;
+      align-items: center;
+      color:  #333333;
       text-transform: uppercase;
       font-size: 24px;
       text-align: left;
+        
+      div{
+          height: 41px;
+          width: 43px;
+          margin-right: 18px;
+          background-image: url("../img/img_320/footer-logo__320.png");  
+        }
       
       span{
-        color: #333333;
-            
-          }
+        color: $color-purple;
+      }
     }
     
     p{
       margin-top: 36px;
       @include footer-text;
       line-height: 21px;
+    }
+    
+    &__logo:hover{
+       color: $color-purple;
+      
+       div{
+          background-image: url("../img/img_320/footer-logo__320-hover.png");  
+        }
+        
+       span{
+         color: #333333;
+       }
     }
 }
 
@@ -37,6 +53,11 @@ footer{
       color: $color-purple;
       font-size: 15px;
       line-height: 23px;
+        
+        a:hover{
+           border-bottom: 1px solid $color-purple; 
+        }    
+        
     }   
 }
 
