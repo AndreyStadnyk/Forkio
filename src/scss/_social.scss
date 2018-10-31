@@ -1,11 +1,12 @@
 .social{
     margin: 0 auto;
-    padding: 120px 65px 6px;
+    padding: 120px 65px 0;
     text-align: center;
     font-weight: 400;
     
     .social-carousel{
         margin: 0 auto;
+        max-width: 740px;
         
         &__slide{
             margin: 0 auto;
@@ -82,14 +83,11 @@
                 font-size: 21px;
                 display: inline-block;
                 width: 210px;
-                
-//                text-align: center;
-                
             }
         }
         
         &__git{
-            color:  #000000;
+            color: #000000;
             background-color:  #f3f3f3; 
         }
         
@@ -107,6 +105,22 @@
             margin-top: 18px;
             color: $color-lightblue;
             font-size: 14px;
+        }
+
+       &__git:hover{
+            color: $color-white;
+            background-color:  #2b414d;
+        }
+       &__twit:hover{
+            color: #26a6d1;
+            background-color: $color-white;
+            border: 1px solid #26a6d1;
+        }
+
+        &__fb:hover{
+            color: #3b5998;
+            background-color: $color-white;
+            border: 1px solid #3b5998;
         }
     }
 }
