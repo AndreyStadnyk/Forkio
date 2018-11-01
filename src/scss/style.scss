@@ -353,7 +353,7 @@ footer{
 @media (min-width: 481px) and (max-width: 992px) {
     .header{
         background-image: url(../img/img_768/header-banner_768.jpg);
-        &__bg{
+        &-bg{
             height: 118px;
         }
         &__content{
