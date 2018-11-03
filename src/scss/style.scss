@@ -228,12 +228,12 @@ body{
     }
 
    .feautures{
-      padding: 89px 10px 6px 10px;
+      padding: 89px 0px 6px 0px;
 
       &__title{
          font-size: 42px;
          line-height: 52px;
-         padding: 0 79px 68px;
+         padding-bottom: 68px;
       }
 
       &-content{
@@ -305,7 +305,7 @@ body{
     }
 
 footer{
-       padding: 0 34px 39px;
+       padding: 0 24px 39px;
     }
 
 .footer-logo{
@@ -417,6 +417,7 @@ footer{
 
     .feautures{
        flex-direction: column;
+       overflow: hidden;
 
     &__title{
        font-size: 42px;
@@ -447,7 +448,7 @@ footer{
        }
 
        &__text{
-          width: 75%;
+          width: 70%;
           text-align: left;
           line-height: 21px;
           margin-bottom: 46px;
@@ -472,12 +473,14 @@ footer{
            margin-bottom: 60px;
            flex-direction: row;
            flex-wrap: wrap;
+           justify-content: center;
 
            button{
-              width: 240px;
+              max-width: 240px;
+              width: 90%;
 
               span{
-                width: 170px;
+                width: 70%;
               }
            }
 
@@ -486,7 +489,7 @@ footer{
            }
 
            &__fb-block{
-              width: 100%;
+              width: 50%;
            }
 
            &:before{
@@ -590,10 +593,14 @@ footer{
 
 
     footer{
-       padding: 55px 40px 40px;
-       display: flex;
-       justify-content: space-between;
-       flex-wrap: wrap;
+       padding: 55px 30px 40px;
+
+       .container{
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+       }
+
    }
 
     .footer-logo{
@@ -717,11 +724,14 @@ footer{
     }
 
     .feautures{
-       padding: 84px 60px 6px 90px;
-       flex-direction: row;
-       justify-content: space-between;
-       align-items: flex-start;
+        overflow: hidden;
+        padding: 84px 0px 6px 0px;
 
+        .container{
+           flex-direction: row;
+           justify-content: space-between;
+           align-items: flex-start;
+        }
 
     &__title{
         display: none;
@@ -918,10 +928,13 @@ footer{
         }
     }
     footer{
-       padding: 60px 90px;
-       display: flex;
-       justify-content: space-between;
-       flex-wrap: wrap;
+       padding: 60px 80px;
+
+        .container{
+           display: flex;
+           justify-content: space-between;
+           flex-wrap: wrap;
+        }
    }
 
     .footer-logo{

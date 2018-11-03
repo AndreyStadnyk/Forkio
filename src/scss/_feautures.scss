@@ -1,12 +1,15 @@
 .feautures{
-    padding: 47px 10px 6px 10px;
     background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 47px 0px 6px 0px;
+
+    .container{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+       max-width: 1200px;
+       margin: 0 auto;
+    }
 
     &__title{
       color:  $color-purple;
